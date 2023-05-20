@@ -40,7 +40,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/about', [AboutController::class, "about"])->name("about")->middleware('guest');
 
 //Bagian Contact
-Route::get('/contact', [ContactController::class, "Contact"])->name("Contact")->middleware('guest');
+Route::get('/contact', [ContactController::class, "contact"])->name("contact")->middleware('guest');
 
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');
