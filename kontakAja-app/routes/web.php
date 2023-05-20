@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 // Bagian About Us
 Route::get('/about', [AboutController::class, "about"])->name("about")->middleware('guest');
+
+//Bagian Contact
+Route::get('/contact', [ContactController::class, "Contact"])->name("Contact")->middleware('guest');
 
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');

@@ -104,7 +104,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
+                            <a href="/" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">Home Version One</a></li>
                                 <li><a href="index-2.html">Home Version Two</a></li>
@@ -119,7 +119,7 @@
                                 <li><a href="/about">About Company</a></li>
                                 <li><a href="team.html">Meet Our Team</a></li>
                                 <li><a href="team-carousel.html">Team Carousel</a></li>
-                                <li><a href="contact.html">Get in Touch</a></li>
+                                <li><a href="/contact">Get in Touch</a></li>
                                 <li><a href="process.html">Our Process</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="/login">Login</a></li>
@@ -149,7 +149,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -168,7 +168,7 @@
                 <div class="widget">
                     <h4 class="title">Additional Links</h4>
                     <ul>
-                        <li><a href="#">About</a></li>
+                        <li><a href="{{ route("about") }}">About</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="/login">Login</a></li>
                         <li><a href="/register">Register</a></li>

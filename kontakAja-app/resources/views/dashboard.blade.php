@@ -7,7 +7,7 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arion Admin Dashboard</title>
+    <title>{{ $title }}</title>
     <meta name="description" content="Arion — This is the best dashboard" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="mobile-web-app-capable" content="yes" />

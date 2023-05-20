@@ -132,7 +132,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
+                            <a href="/" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">Home Version One</a></li>
                                 <li><a href="index-2.html">Home Version Two</a></li>
@@ -147,11 +147,11 @@
                                 <li><a href="/about">About Company</a></li>
                                 <li><a href="team.html">Meet Our Team</a></li>
                                 <li><a href="team-carousel.html">Team Carousel</a></li>
-                                <li><a href="contact.html">Get in Touch</a></li>
+                                <li><a href="/contact">Get in Touch</a></li>
                                 <li><a href="process.html">Our Process</a></li>
                                 <li><a href="faq.html">Faq</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
                                 <li><a href="404.html">Error Page</a></li>
                             </ul>
                         </li>
@@ -177,7 +177,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -200,7 +200,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <h1>About Us</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
                         <li><a href="#">Pages</a></li>
                         <li class="active">About Us</li>
                     </ul>
