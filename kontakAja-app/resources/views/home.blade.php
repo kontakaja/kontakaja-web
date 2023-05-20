@@ -9,7 +9,7 @@
     <meta name="description" content="Digilab - SEO & Digital Marketing Agency Template">
 
     <!-- ========== Page Title ========== -->
-    <title>Digilab - SEO & Digital Marketing Agency Template</title>
+    <title>{{ $title }}</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -116,7 +116,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
                             <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Company</a></li>
+                                <li><a href="/about">About Company</a></li>
                                 <li><a href="team.html">Meet Our Team</a></li>
                                 <li><a href="team-carousel.html">Team Carousel</a></li>
                                 <li><a href="contact.html">Get in Touch</a></li>

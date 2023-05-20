@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +34,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 // Bagian Register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+// Bagian About Us
+Route::get('/about', [AboutController::class, "about"])->name("about")->middleware('guest');
 
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');
