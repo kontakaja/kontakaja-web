@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProcessController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,9 @@ Route::get('/about', [AboutController::class, "about"])->name("about")->middlewa
 
 //Bagian Contact
 Route::get('/contact', [ContactController::class, "contact"])->name("contact")->middleware('guest');
+
+//Bagian Process
+Route::get('/process', [ProcessController::class, "process"])->name("process")->middleware('guest');
 
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');

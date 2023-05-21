@@ -120,7 +120,7 @@
                                 <li><a href="team.html">Meet Our Team</a></li>
                                 <li><a href="team-carousel.html">Team Carousel</a></li>
                                 <li><a href="/contact">Get in Touch</a></li>
-                                <li><a href="process.html">Our Process</a></li>
+                                <li><a href="/process">Our Process</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="/login">Login</a></li>
                                 <li><a href="/register">Register</a></li>
@@ -152,7 +152,7 @@
                             <a href="/contact">Contact</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </div>
 
             <!-- Start Side Menu -->
