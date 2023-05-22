@@ -60,8 +60,9 @@
                                             <div class="form-group">
                                                 <i class="fas fa-user"></i>
                                                 <input placeholder="Name*" type="text"
-                                                    class="form-control @error('name') is-invalid @enderror" name="name"
-                                                    id="name" required value="{{ old('name') }}" autofocus>
+                                                    class="form-control @error('name') is-invalid @enderror"
+                                                    name="name" id="name" required value="{{ old('name') }}"
+                                                    autofocus>
                                                 @error('name')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
@@ -75,8 +76,9 @@
                                             <div class="form-group">
                                                 <i class="fas fa-user"></i>
                                                 <input placeholder="Username*" type="text"
-                                                    class="form-control @error('username') is-invalid @enderror" name="username"
-                                                    id="username" required value="{{ old('username') }}" autofocus>
+                                                    class="form-control @error('username') is-invalid @enderror"
+                                                    name="username" id="username" required
+                                                    value="{{ old('username') }}" autofocus>
                                                 @error('username')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
@@ -90,8 +92,9 @@
                                             <div class="form-group">
                                                 <i class="fas fa-envelope-open"></i>
                                                 <input placeholder="Email*" type="email"
-                                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                                    id="email" required value="{{ old('email') }}" autofocus>
+                                                    class="form-control @error('email') is-invalid @enderror"
+                                                    name="email" id="email" required value="{{ old('email') }}"
+                                                    autofocus>
                                                 @error('email')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
@@ -105,8 +108,9 @@
                                             <div class="form-group">
                                                 <i class="fas fa-lock"></i>
                                                 <input placeholder="Password*" type="password"
-                                                    class="form-control @error('password') is-invalid @enderror" name="password"
-                                                    id="password" required value="{{ old('password') }}" autofocus>
+                                                    class="form-control @error('password') is-invalid @enderror"
+                                                    name="password" id="password" required
+                                                    value="{{ old('password') }}" autofocus>
                                                 @error('password')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
@@ -115,15 +119,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <div class="row">
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="form-group">
-                                                <i class="fas fa-lock"></i>
-                                                <input class="form-control"
-                                                    placeholder="Confirm Password*" type="text">
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                     <div class="col-lg-12 col-md-12">
                                         <div class="row">
                                             <button type="submit">

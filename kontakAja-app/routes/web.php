@@ -29,13 +29,17 @@ Route::get('/', function () {
 });
 
 // Bagian Login
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/login', 'index')->name('login')->middleware('guest');
+    Route::post('/login', 'authenticate');
+    Route::post('/logout', 'logout');
+});
 
 // Bagian Register
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::controller(RegisterController::class)->group(function () {
+    Route::get('/register', 'index')->middleware('guest');
+    Route::post('/register', 'store');
+});
 
 // Bagian About Us
 Route::get('/about', [AboutController::class, "about"])->name("about")->middleware('guest');
