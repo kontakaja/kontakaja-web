@@ -83,7 +83,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="link align-right">
-                                                <a href="#">Forgot Password?</a>
+                                                <a href="/forgot-password">Forgot Password?</a>
                                             </div>
                                         </div>
                                     </div>

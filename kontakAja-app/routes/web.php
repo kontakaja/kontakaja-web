@@ -3,10 +3,19 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PasswordResetLinkController;
+use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProcessController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +46,20 @@ Route::controller(LoginController::class)->group(function () {
 
 // Bagian Register
 Route::controller(RegisterController::class)->group(function () {
-    Route::get('/register', 'index')->middleware('guest');
+    Route::get('/register', 'index')->name('register')->middleware('guest');
     Route::post('/register', 'store');
+});
+
+// Bagian Forgot Password
+Route::controller(PasswordResetLinkController::class)->group(function () {
+    Route::get('/forgot-password', 'create')->name('password.request')->middleware('guest');
+    Route::post('forgot-password', 'store')->name('password.email')->middleware('guest');
+});
+
+// Sub-bagian Forgot Password (Reset Password)
+Route::controller(NewPasswordController::class)->group(function () {
+    Route::get('reset-password/{token}', 'create')->name('password.reset')->middleware('guest');
+    Route::post('reset-password', 'store')->name('password.update')->middleware('guest');
 });
 
 // Bagian About Us
