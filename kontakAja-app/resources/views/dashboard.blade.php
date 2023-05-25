@@ -617,7 +617,7 @@
                                             <h4 class="contact-card__title">Deni Anjaya</h4>
                                             <div class="contact-card__label"><span class="label label--primary">Keluarga</span>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="card__footer">
                                             <div class="card__container">
@@ -629,7 +629,7 @@
                                                             </div>
                                                             <div class="col-auto text-light-theme"><a href="tel:#">+6281123456789</a>
                                                             </div>
-                                                </div>                                        
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -687,7 +687,7 @@
                                             <h4 class="contact-card__title">Beti Arianti</h4>
                                             <div class="contact-card__label"><span class="label label--primary">Teman</span>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="card__footer">
                                             <div class="card__container">
@@ -699,7 +699,7 @@
                                                             </div>
                                                             <div class="col-auto text-light-theme"><a href="tel:#">+6281123456789</a>
                                                             </div>
-                                                </div>                                        
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -757,7 +757,7 @@
                                             <h4 class="contact-card__title">Soleh</h4>
                                             <div class="contact-card__label"><span class="label label--primary">Keluarga</span>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="card__footer">
                                             <div class="card__container">
@@ -769,7 +769,7 @@
                                                         </div>
                                                         <div class="col-auto text-light-theme"><a href="tel:#">+6281123456789</a>
                                                     </div>
-                                                </div>                                        
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -793,7 +793,7 @@
                     </div>
                     <div class="modal__body">
                         <div class="modal__container">
-                            <form method="POST">
+                            <form method="post">
                                 <div class="row row--md">
                                     <div class="col-12 form-group form-group--lg">
                                         <label class="form-label form-label--sm">Nama</label>
@@ -819,12 +819,12 @@
                                             <input class="input" type="text" required>
                                         </div>
                                     </div>
-                                    <div class="col-12 form-group form-group--lg">
+                                    {{-- <div class="col-12 form-group form-group--lg">
                                         <label class="form-label form-label--sm">Link Google Maps</label>
                                         <div class="input-group">
                                             <input class="input" type="text" required>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-12 form-group form-group--lg">
                                         <label class="form-label form-label--sm">Kategori</label>
                                         <div class="input-group">

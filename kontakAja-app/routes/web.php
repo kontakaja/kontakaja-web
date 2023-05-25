@@ -1,20 +1,12 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PasswordResetLinkController;
 use App\Http\Controllers\NewPasswordController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ProcessController;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Str;
 
 
 /*
@@ -63,13 +55,19 @@ Route::controller(NewPasswordController::class)->group(function () {
 });
 
 // Bagian About Us
-Route::get('/about', [AboutController::class, "about"])->name("about")->middleware('guest');
+Route::get('/about', function () {
+    return view ("about", ["title" => "About"]);
+})->name("about")->middleware('guest');
 
 //Bagian Contact
-Route::get('/contact', [ContactController::class, "contact"])->name("contact")->middleware('guest');
+Route::get('/contact', function () {
+    return view('contactUs', ["title" => "Contact"]);
+})->name("contact")->middleware('guest');
 
 //Bagian Process
-Route::get('/process', [ProcessController::class, "process"])->name("process")->middleware('guest');
+Route::get('/process', function () {
+    return view ("process", ["title" => "Process"]);
+})->name("process")->middleware('guest');
 
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');
