@@ -7316,7 +7316,7 @@ html[data-theme="dark"] .input-group__arrows {
   top: 0;
   right: 0;
   z-index: 1005;
-  width: calc(100% - var(--sidebar-full-width));
+  width: 100%;
   height: var(--header-height);
   border-bottom: 1px solid var(--border-grey-color);
   background-color: var(--background-secondary-color);
@@ -7344,9 +7344,6 @@ html[data-theme="dark"] .input-group__arrows {
 }
 
 @media (max-width: 1365px) and (min-width: 768px) {
-  .header {
-    width: calc(100% - var(--sidebar-collapse-width));
-  }
   .sidebar-show .header {
     -webkit-transform: translateX(calc(var(--sidebar-full-width) - var(--sidebar-collapse-width)));
             transform: translateX(calc(var(--sidebar-full-width) - var(--sidebar-collapse-width)));
