@@ -5875,7 +5875,7 @@ html[data-theme="dark"] .input-group__arrows {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: calc(100% - var(--sidebar-full-width));
+  max-width: 100%;
   padding-top: calc(var(--header-height) + 2.875rem);
   padding-bottom: 2.5333rem;
   -webkit-transition: var(--t-base);
@@ -5901,7 +5901,7 @@ html[data-theme="dark"] .input-group__arrows {
 
 @media (max-width: 1365px) and (min-width: 768px) {
   .page-content {
-    max-width: calc(100% - var(--sidebar-collapse-width));
+    max-width: 100%;
   }
   .sidebar-show .page-content {
     -webkit-transform: translateX(calc(var(--sidebar-full-width) - var(--sidebar-collapse-width)));
