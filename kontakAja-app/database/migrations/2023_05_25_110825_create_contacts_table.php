@@ -17,8 +17,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->text('excerpt');
-            $table->timestamp('published_at')->nullable();
+            $table->string('name');
+            $table->integer('phone_number');
+            $table->string('email')->unique();
+            $table->text('address');
+            $table->string("category");
             $table->timestamps();
         });
     }
