@@ -20,10 +20,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // Bagian Home
 Route::get('/', function () {
     return view('home', ["title" => "Home"]);
@@ -73,4 +69,9 @@ Route::get('/process', function () {
 Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware('auth');
 
 // Bagian Contact Dashboard
-Route::get('/contact-dashboard', [ContactController::class, "index"])->name("contact-dashboard")->middleware('auth');
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/dashboard/contacts', "index")->name("index-contact")->middleware('auth');
+    Route::get('/dashboard/contacts/create', "create")->name("create-contact")->middleware('auth');
+    Route::post('/dashboard/contacts/store', "store")->name("store-contact")->middleware('auth');
+});
+

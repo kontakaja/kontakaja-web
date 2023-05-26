@@ -10,6 +10,6 @@ class DashboardController extends Controller
     public function index()
     {
         $user = Auth::user()->username;
-        return view("dashboard", ["title" => "Dashboard"])->with('user', $user);
+        return view("dashboard.index", ["title" => "Dashboard"])->with('user', $user);
     }
 }

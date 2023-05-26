@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Category;
+use App\Models\Contact;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +23,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // User::factory(5)->create();
+
+        Category::create(["name" => "Guru"]);
+        Category::create(["name" => "Keluarga"]);
+        Category::create(["name" => "Teman"]);
+        Category::create(["name" => "Tetangga"]);
+
+        // Contact::factory(15)->create();
     }
 }

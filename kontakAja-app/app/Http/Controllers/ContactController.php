@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class ContactController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +18,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view("contact-dashboard");
+        $user = Auth::user()->username;
+        return view("dashboard.contact.index", [
+            "title" => "Dashboard",
+            "contacts" => Contact::where('user_id', auth()->user()->id)->get()
+        ])->with('user', $user);
     }
 
     /**
@@ -23,7 +32,11 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user()->username;
+        return view("dashboard.contact.create", [
+            "title" => "Tambah Kontak",
+            "categories" => Category::all()
+        ])->with('user', $user);
     }
 
     /**
@@ -34,7 +47,19 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:40',
+            'category_id' => 'required',
+            'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
+            'email' => 'required|email:dns',
+            'address' => 'required|max:100'
+        ]);
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Contact::create($validatedData);
+
+        return redirect('/dashboard/contacts')->with('success', 'New contact has been added!');
     }
 
     /**
@@ -43,10 +68,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -54,9 +79,12 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact)
     {
-        //
+        return view('dashboard.contact.edit', [
+            'contact' => $contact,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
