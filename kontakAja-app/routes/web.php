@@ -59,7 +59,7 @@ Route::get('/about', function () {
     return view ("about", ["title" => "About"]);
 })->name("about")->middleware('guest');
 
-//Bagian Contact
+//Bagian Contact Us
 Route::get('/contact', function () {
     return view('contactUs', ["title" => "Contact"]);
 })->name("contact")->middleware('guest');
@@ -70,4 +70,7 @@ Route::get('/process', function () {
 })->name("process")->middleware('guest');
 
 // Bagian Dashboard
-Route::get('/dashboard', [DashboardController::class, "dashboard"])->name("dashboard")->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware('auth');
+
+// Bagian Contact Dashboard
+Route::get('/contact-dashboard', [ContactController::class, "index"])->name("contact-dashboard")->middleware('auth');
