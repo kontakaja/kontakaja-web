@@ -1,12 +1,16 @@
 @extends('dashboard.layouts.main')
 @section('container')
-    <div class="container">
+    <div class="create">
+        <div class="container">
+       
         <div class="modal__content">
+            
             <div class="modal__header">
                 <div class="modal__container">
                     <h2 class="modal__title">Tambah Kontak</h2>
                 </div>
             </div>
+            
             <div class="modal__body">
                 <div class="modal__container">
                     <form action="/dashboard/contacts/store" method="POST">
@@ -81,11 +85,11 @@
                                 </div>
                             </div>
                             {{-- <div class="col-12 form-group form-group--lg">
-                            <label class="form-label form-label--sm">Link Google Maps</label>
+                            <label class="form-label form-label--sm">Foto</label>
                             <div class="input-group">
-                                <input class="input" type="text" required>
-                            </div>
-                        </div> --}}
+                                <input class="input" type="file" required>
+                            </div> --}}
+                        </div>
                         </div>
 
                         <button class="button button--primary" type="submit"><span class="button__icon button__icon--left">
@@ -99,6 +103,8 @@
                     </form>
                 </div>
             </div>
+        
         </div>
+    </div>
     </div>
 @endsection
