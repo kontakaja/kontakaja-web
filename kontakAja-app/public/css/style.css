@@ -8683,6 +8683,16 @@ span.flatpickr-weekday {
   padding: 1.2rem 0 1rem;
 }
 
+.create {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 .modal-success .modal__body {
   padding: 4rem 0;
 }
