@@ -94,9 +94,22 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contact $contact)
     {
-        //
+        $validated_data = $request->validate([
+            'name' => 'required|max:40',
+            'category_id' => 'required',
+            'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
+            'email' => 'required|email:dns',
+            'address' => 'required|max:100'
+        ]);
+
+        // $validatedData = $request->validate($rules);
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Contact::whereId($contact->id)->update($validatedData);
+
+        return redirect('/dashboard/contacts')->with('success', 'Contact has been updated!');
     }
 
     /**
@@ -105,8 +118,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contact $contact)
     {
-        //
+        Contact::destroy($contact->id);
+
+        return redirect('/dashboard/contacts')->with('success', 'Contact has been deleted!');
     }
 }

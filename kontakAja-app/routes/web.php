@@ -73,5 +73,8 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('/dashboard/contacts', "index")->name("index-contact")->middleware('auth');
     Route::get('/dashboard/contacts/create', "create")->name("create-contact")->middleware('auth');
     Route::post('/dashboard/contacts/store', "store")->name("store-contact")->middleware('auth');
+    Route::get('/dashboard/contacts/edit/{id}Contact', "edit")->name("edit-contact")->middleware('auth');
+    Route::post('/dashboard/contacts/update/{id}Contact', "update")->name("update-contact")->middleware('auth');
+    Route::get('/dashboard/contacts/delete/{id}Contact', "delete")->name("delete-contact")->middleware('auth');
 });
 
