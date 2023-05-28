@@ -53,10 +53,6 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-up-form {
-  opacity: 0;
-  z-index: 1;
-}
 
 form.sign-in-form {
   z-index: 2;
@@ -212,6 +208,10 @@ a:not(.choice):hover {
   z-index: 6;
 }
 
+.container.signUp:before {
+  background-image: linear-gradient(210deg, #4481eb 0%, #FFAEBC 50%, #ff77a9 100%);
+}
+
 .image {
   width: 100%;
   transition: transform 1.1s ease-in-out;
@@ -255,13 +255,33 @@ a:not(.choice):hover {
 }
 
 .btn.transparent {
-  margin: 0;
-  background: none;
-  border: 2px solid #fff;
-  width: 130px;
-  height: 41px;
+  width: 150px;
+  background-color: #FFB6C1;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.8rem;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn .in {
+  width: 150px;
+  background-color: #FFB6C1;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .right-panel .image,
@@ -269,7 +289,7 @@ a:not(.choice):hover {
   transform: translateX(800px);
 }
 
-/* ANIMATION */
+
 
 .container.sign-up-mode:before {
   transform: translate(100%, -50%);
@@ -365,12 +385,6 @@ a:not(.choice):hover {
   .panel p {
     font-size: 0.7rem;
     padding: 0.5rem 0;
-  }
-
-  .btn.transparent {
-    width: 110px;
-    height: 35px;
-    font-size: 0.7rem;
   }
 
   .container:before {
