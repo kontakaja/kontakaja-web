@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styleLogin.css" />
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form" id="signIn">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="password" name="password" />
+              <i class="fas fa-eye" id="show-password"></i>
+              <i class="fas fa-eye-slash" id="hide-password"></i>
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <a class="choice" href="forget-password.html">Forgot password?</a>
+          </form> 
+
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="password-signup" name="password" />
+              <i class="fas fa-eye" id="show-password-signup"></i>
+              <i class="fas fa-eye-slash" id="hide-password-signup"></i>
+            </div>
+            <input type="submit" class="btnSignUp" value="Sign up" />
+          </form>
+
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Baru di App ini?</h3>
+            <p>
+              Jika baru gunakan aplikasi ini, SignUp untuk akses fitur-fitur. Dengan mendaftar, nikmati manfaat lengkap yang disediakan aplikasi ini
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Sudah Memiliki Akun?</h3>
+            <p>
+              Jika sudah punya akun, SignIn  untuk akses fitur-fitur. Dengan masuk, mudah lanjutkan penggunaan dan manfaatkan semua fitur yang ada sesuai kebutuhan.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="SignInSignUp.js"></script>
+  </body>
+</html>
