@@ -13823,6 +13823,255 @@ span.flatpickr-weekday {
   fill: var(--text-secondary-color);
 }
 
+/*Detail Contact*/
+/* .detail-contact {
+  position: relative;
+  width: 1000px;
+  background-color: var(--white);
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+  margin: auto;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background-color: #03F0FC;
+  z-index: -1;
+}
+
+.profile-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+}
+
+.detail-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.profile-card-top i {
+  cursor: pointer;
+}
+
+.profile-card-top div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.5rem;
+}
+
+.profile-card-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+
+}
+
+.profile-pic {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: red;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 8px 5px var(--primary);
+}
+
+.profile-pic i {
+  position: absolute;
+  right: 0;
+  top: 6.5rem;
+  font-size: 1.2rem;
+  color: var(--green);
+}
+
+.profile-card-middle h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.profile-card-middle h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--grey);
+}
+
+.profile-card-middle p {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--grey);
+}
+
+.button-horizontal .number {
+  border: 1px solid black;
+width: 60%;
+}
+.social-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+.social-data div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--secondary);
+}
+
+.social-data div span {
+  color: var(--grey);
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.skills h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.skills-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0.5rem;
+}
+
+.skills-list li {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.skills-list li a:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary-light-2);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.social-icons div {
+  border: 1px solid black;
+  width: 10rem;
+  height: 3.5rem;
+  line-height: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons div:hover {
+  background-color: #FFAEBC;
+  color: white;
+}
+
+.social-icons div h3{
+  font-family: Roboto;
+  font-size: 15px;
+}
+
+.social-icons div a {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.profile-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.profile-card-bottom a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 0.7rem 2.5rem;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+.profile-card-bottom .hire-me {
+  color: var(--white);
+  border: 1px solid transparent;
+
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile-card-bottom .hire-me:hover {
+  color: var(--secondary);
+  background-color: var(--white);
+  border: 1px solid var(--secondary);
+}
+
+.profile-card-bottom .follow {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile-card-bottom .follow:hover {
+  color: var(--white);
+  background-color: var(--secondary);
+} */
+
 .todo-grid {
   --todo-top-height: 4.2rem;
   position: relative;

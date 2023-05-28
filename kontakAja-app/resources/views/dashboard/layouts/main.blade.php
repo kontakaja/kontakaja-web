@@ -39,6 +39,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/content/favicons/favicon-32x32.png') }}" />
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/content/favicons/favicon-96x96.png') }}" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/content/favicons/favicon-16x16.png') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- <link rel="manifest" href="img/content/favicons/manifest.json" />-->
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
