@@ -506,8 +506,7 @@
     <script src="{{ asset('js/components.js') }}"></script>
     <script src="{{ asset('js/common.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/functions.js') }}"></script>
-        
+
 </body>
 
 </html>

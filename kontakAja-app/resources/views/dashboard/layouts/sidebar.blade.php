@@ -23,7 +23,7 @@
                                     <use xlink:href="#icon-contacts"></use>
                                 </svg></span><span class="sidebar__link-text">Kontak</span></a>
                     </li>
-                    <li class="sidebar__menu-item"><a class="sidebar__link" href="" aria-expanded="true"><span
+                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard/todo" aria-expanded="true"><span
                                 class="sidebar__link-icon">
                                 <svg class="icon-icon-todo">
                                     <use xlink:href="#icon-todo"></use>

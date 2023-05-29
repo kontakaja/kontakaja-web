@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PasswordResetLinkController;
 use App\Http\Controllers\NewPasswordController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -77,4 +78,10 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/dashboard/contacts/update/{id}Contact', "update")->name("update-contact")->middleware('auth');
     Route::get('/dashboard/contacts/delete/{id}Contact', "delete")->name("delete-contact")->middleware('auth');
 });
+
+// Bagian Todo Dashboard
+Route::get('/dashboard/todo', function () {
+    $user = Auth::user()->username;
+    return view ("dashboard.todo.index", ["title" => "Todo"])->with('user', $user);
+})->name("todo")->middleware('auth');
 
