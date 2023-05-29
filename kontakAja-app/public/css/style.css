@@ -13824,7 +13824,7 @@ span.flatpickr-weekday {
 }
 
 /*Detail Contact*/
-/* .detail-contact {
+.detail-contact {
   position: relative;
   width: 1000px;
   background-color: var(--white);
@@ -13833,6 +13833,7 @@ span.flatpickr-weekday {
   overflow: hidden;
   z-index: 2;
   margin: auto;
+  box-shadow: 0 0 4px 0px black;
 }
 
 .backdrop {
@@ -13841,11 +13842,11 @@ span.flatpickr-weekday {
   left: 0;
   right: 0;
   height: 12rem;
-  background-color: #03F0FC;
+  background-color: #F8FAFB;
   z-index: -1;
 }
 
-.profile-card-top {
+.detail-contact-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13853,23 +13854,28 @@ span.flatpickr-weekday {
   padding: 0.8rem 1rem;
 }
 
+.detail-contact-top a:hover {
+  color: #FFAEBC;
+  font-weight: bold;
+}
+
 .detail-item {
   text-align: center;
   margin: 10px;
 }
 
-.profile-card-top i {
+.detail-contact-top i {
   cursor: pointer;
 }
 
-.profile-card-top div {
+.detail-contact-top div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 3.5rem;
 }
 
-.profile-card-middle {
+.detail-contact-middle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13902,19 +13908,19 @@ span.flatpickr-weekday {
   color: var(--green);
 }
 
-.profile-card-middle h1 {
+.detail-contact-middle h1 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--secondary);
 }
 
-.profile-card-middle h2 {
+.detail-contact-middle h2 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: var(--grey);
 }
 
-.profile-card-middle p {
+.detail-contact-middle p {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--grey);
   padding-bottom: 1rem;
@@ -13993,7 +13999,7 @@ width: 60%;
   background-color: var(--secondary-light-2);
 }
 
-.social-icons {
+.button-vertical {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -14001,7 +14007,7 @@ width: 60%;
   margin-bottom: 1rem;
 }
 
-.social-icons div {
+.button-vertical div {
   border: 1px solid black;
   width: 10rem;
   height: 3.5rem;
@@ -14014,20 +14020,46 @@ width: 60%;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.social-icons div:hover {
+.button-vertical div:hover {
   background-color: #FFAEBC;
   color: white;
 }
 
-.social-icons div h3{
+.button-vertical div h3{
   font-family: Roboto;
   font-size: 15px;
 }
 
-.social-icons div a {
+.button-vertical div a {
   font-size: 20px;
   margin-top: 5px;
 }
+
+.button-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+
+}
+
+.button-horizontal div {
+  border: 1px solid black;
+}
+
+.detail-contact .delete h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.detail-contact .delete h3:hover {
+  color: red;
+  
+}
+
+
+
 .profile-card-bottom {
   display: flex;
   align-items: center;
@@ -14070,7 +14102,7 @@ width: 60%;
 .profile-card-bottom .follow:hover {
   color: var(--white);
   background-color: var(--secondary);
-} */
+}
 
 .todo-grid {
   --todo-top-height: 4.2rem;
@@ -15170,6 +15202,22 @@ width: 60%;
 .timeline-item__input-group .input, .timeline-item__input-group .input-group .select2-container .select2-selection--single, .input-group .select2-container .timeline-item__input-group .select2-selection--single, .timeline-item__input-group .input-group--white .select2-container .select2-selection--single, .input-group--white .select2-container .timeline-item__input-group .select2-selection--single, .timeline-item__input-group .input-group--append-lg .select2-container .select2-selection--single, .input-group--append-lg .select2-container .timeline-item__input-group .select2-selection--single {
   height: 4rem;
   padding: 1.4rem 1rem 1.4rem 3.2rem;
+}
+
+.form-select {
+  background-color: #F8FAFB;
+  border: 0;
+  margin: 10px;
+  padding:10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.col-12 form-group form-group--lg {
+  display: flex;
 }
 
 /* Authentication */
