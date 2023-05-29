@@ -24,8 +24,8 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        // return back()->with('loginError', 'Login gagal!');
-        return back()->withErrors(['email' => 'Wrong Email or Password!',]);
+        return back()->with('failed', 'Login gagal! Email atau password Anda salah');
+        // return back()->withErrors(['email' => 'Wrong Email or Password!',]);
     }
 
     public function logout()

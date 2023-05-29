@@ -51,11 +51,6 @@ form {
     grid-row: 1 / 2;
 }
 
-form.sign-up-form {
-    opacity: 0;
-    z-index: 1;
-}
-
 form.sign-in-form {
     z-index: 2;
 }
@@ -146,6 +141,28 @@ a:not(.choice):hover {
     font-weight: 500;
 }
 
+.invalid-feedback {
+    color: red;
+}
+
+.alert ul {
+    list-style-type: none;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #dc3545;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #198754;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
 .btn {
     width: 150px;
     background-color: #87ceeb;
@@ -213,6 +230,15 @@ a:not(.choice):hover {
     z-index: 6;
 }
 
+.container.signUp:before {
+    background-image: linear-gradient(
+        210deg,
+        #4481eb 0%,
+        #ffaebc 50%,
+        #ff77a9 100%
+    );
+}
+
 .image {
     width: 100%;
     transition: transform 1.1s ease-in-out;
@@ -256,21 +282,39 @@ a:not(.choice):hover {
 }
 
 .btn.transparent {
-    margin: 0;
-    background: none;
-    border: 2px solid #fff;
-    width: 130px;
-    height: 41px;
+    width: 150px;
+    background-color: #ffb6c1;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.8rem;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn .in {
+    width: 150px;
+    background-color: #ffb6c1;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .right-panel .image,
 .right-panel .content {
     transform: translateX(800px);
 }
-
-/* ANIMATION */
 
 .container.sign-up-mode:before {
     transform: translate(100%, -50%);
@@ -366,12 +410,6 @@ a:not(.choice):hover {
     .panel p {
         font-size: 0.7rem;
         padding: 0.5rem 0;
-    }
-
-    .btn.transparent {
-        width: 110px;
-        height: 35px;
-        font-size: 0.7rem;
     }
 
     .container:before {

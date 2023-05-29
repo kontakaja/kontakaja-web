@@ -40,7 +40,7 @@ Route::controller(RegisterController::class)->group(function () {
 
 // Bagian Forgot Password
 Route::controller(PasswordResetLinkController::class)->group(function () {
-    Route::get('/forgot-password', 'create')->name('password.request')->middleware('guest');
+    Route::get('forgot-password', 'create')->name('password.request')->middleware('guest');
     Route::post('forgot-password', 'store')->name('password.email')->middleware('guest');
 });
 
