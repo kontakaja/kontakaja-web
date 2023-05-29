@@ -11,7 +11,7 @@
         <div class="sidebar__content" data-simplebar="data-simplebar">
             <nav class="sidebar__nav">
                 <ul class="sidebar__menu">
-                    <li class="sidebar__menu-item"><a class="sidebar__link active" href="/dashboard"
+                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard"
                             aria-expanded="true"><span class="sidebar__link-icon">
                                 <svg class="icon-icon-dashboard">
                                     <use xlink:href="#icon-dashboard"></use>

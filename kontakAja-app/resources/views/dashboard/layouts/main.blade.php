@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('css/filepond-plugin-image-preview.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/style-todo.css') }}" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/content/favicons/apple-icon-57x57.png') }}" />
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/content/favicons/apple-icon-60x60.png') }}" />
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/content/favicons/apple-icon-72x72.png') }}" />
@@ -504,6 +505,9 @@
     <script src="{{ asset('js/vendor/scrollmagic/debug.addIndicators.min.js') }}"></script>
     <script src="{{ asset('js/components.js') }}"></script>
     <script src="{{ asset('js/common.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
+        
 </body>
 
 </html>

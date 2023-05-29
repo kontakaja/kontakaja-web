@@ -26,27 +26,7 @@
                                         <use xlink:href="#icon-arrow-down"></use>
                                     </svg></span>
                             </a>
-                            <div class="profile-dropdown dropdown-menu dropdown-menu--right"><a
-                                    class="profile-dropdown__item dropdown-menu__item" href="#"
-                                    tabindex="0"><span class="profile-dropdown__icon">
-                                        <svg class="icon-icon-user">
-                                            <use xlink:href="#icon-user"></use>
-                                        </svg></span><span>My Profile</span></a><a
-                                    class="profile-dropdown__item dropdown-menu__item" href="#"
-                                    tabindex="0"><span class="profile-dropdown__icon">
-                                        <svg class="icon-icon-chat">
-                                            <use xlink:href="#icon-chat"></use>
-                                        </svg></span><span>My chat</span></a><a
-                                    class="profile-dropdown__item dropdown-menu__item" href="#"
-                                    tabindex="0"><span class="profile-dropdown__icon">
-                                        <svg class="icon-icon-task">
-                                            <use xlink:href="#icon-task"></use>
-                                        </svg></span><span>Tasks</span></a><a
-                                    class="profile-dropdown__item dropdown-menu__item" href="#"
-                                    tabindex="0"><span class="profile-dropdown__icon">
-                                        <svg class="icon-icon-settings">
-                                            <use xlink:href="#icon-settings"></use>
-                                        </svg></span><span>Settings</span></a>
+                            <div class="profile-dropdown dropdown-menu dropdown-menu--right">
                                 <form action="/logout" method="post">
                                     @csrf
                                     <div class="dropdown-menu__divider"></div>
