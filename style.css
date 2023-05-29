@@ -1,66 +1,3 @@
-/* ----------------------------------
-
-Template Name: Digilab - SEO & Digital Marketing Agency Template
-Author: validtheme
-Description:
-Version: 1.0
-
-Main Font    : Nunito
-Main Color   : #4154f1
-
--------------------------------------
-
-Table of contents
-        
-    01. Template default css
-    02. Navbar
-        - Navbar Default
-        - Navbar Sticky
-        - Navbar Transparent
-        - Navbar With Topbar
-    03. Banner
-    04. Features
-        - Version One
-        - Version Two
-    05. About Area
-    06. SEO Test
-    07. What We Offer
-    08. Services
-        - Carousel
-        - Grid
-        - Carousel Stage
-    09. Our Process
-    10. Case Studies
-    11. Our Pertner
-    12. Pricing Table
-    13. Team
-        - Grid Colum
-        - Carousel
-    14. Testimonials
-    15. Our Benifits
-    16. Subscribe Form
-    17. Why Choose Us
-    18. Fun Factor
-    18. Faq
-    19. Blog
-        - Standard
-        - Left Sidebar
-        - Right Sidebar
-        - Single
-    20. Concat Area
-    21. Get Started Area
-    22. Error 404
-    23. Footer
-    24. PHP Contact Form
-    25. Others
-
-*/
-
-
-/*
-** General Styles for HTML tags
-*/
-
 * {
   padding: 0;
   margin: 0;
@@ -74,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 30px;
@@ -91,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #232323;
   font-weight: normal;
   line-height: 1.2;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0;
   margin: 0;
 }
