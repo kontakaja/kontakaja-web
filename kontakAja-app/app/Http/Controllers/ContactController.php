@@ -18,11 +18,16 @@ class ContactController extends Controller
      */
     public function index()
     {
+        $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
+        $cari_contact = Contact::where('user_id', auth()->user()->id)->filter(request(['search']))->get();
+        $contact = Contact::where('user_id', auth()->user()->id)->get();
         $user = Auth::user()->username;
+
         return view("dashboard.contact.index", [
             "title" => "Dashboard",
-            "contacts" => Contact::where('user_id', auth()->user()->id)->get()
-        ])->with('user', $user);
+            "contacts" => $contact,
+            "contacts" => $cari_contact,
+        ])->with('user', $user)->with('total_contact', $total_contact);
     }
 
     /**

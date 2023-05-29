@@ -3,21 +3,19 @@
 @section('container')
     <div class="container">
         <div class="page-header">
-            <h1 class="page-header__title">Kontak <span class="text-grey">(50)</span></h1>
+            <h1 class="page-header__title">Kontak <span class="text-grey">({{ $total_contact }})</span></h1>
         </div>
         <div class="toolbox">
             <div class="toolbox__row row gutter-bottom-xs">
                 <div class="toolbox__right col-12 col-lg-auto">
                     <div class="toolbox__right-row row row--xs flex-nowrap">
                         <div class="col col-lg-auto">
-                            <form class="toolbox__search" method="get">
-                                <div class="input-group input-group--white input-group--prepend">
-                                    <div class="input-group__prepend">
-                                        <svg class="icon-icon-search">
-                                            <use xlink:href="#icon-search"></use>
-                                        </svg>
-                                    </div>
-                                    <input class="input" type="text" placeholder="Cari Kontak">
+                            <form class="toolbox__search" action="/dashboard/contacts">
+                                <div class="input-group input-group--white input-group--prepend input-group-lg">
+                                    <input type="text" class="form-control" placeholder="Cari kontak"
+                                        aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ request('search') }}" name="search" autocomplete="off">
+                                    <button class="btn btn-outline-primary" type="submit"
+                                        id="button-addon2">Search</button>
                                 </div>
                             </form>
                         </div>
@@ -38,8 +36,8 @@
         </div>
         <div class="table-wrapper tab-content">
             <div class="tab-pane fade show active" id="tab-list">
-                    <div class="contacts-grid">
-                        @foreach ($contacts as $contact)
+                <div class="contacts-grid">
+                    @foreach ($contacts as $contact)
                         <div class="contact-card card">
                             <div class="card__wrapper">
                                 <div class="card__container">
@@ -136,9 +134,9 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
-                    </div>
+                    @endforeach
                 </div>
             </div>
+        </div>
     </div>
 @endsection
