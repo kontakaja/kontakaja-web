@@ -18,7 +18,6 @@
                     <h2 class="contact-category">Keluarga</h2>
                   </div>
               
-                   
                   <div class="button-vertical">
                     <div>
                       <a class="far fa-comment-dots"></a>
@@ -45,8 +44,8 @@
                 <div class="delete">
                     <h3>Delete</h3>
                 </div>
-             
+
               </div>
-        </div> 
+        </div>
     </div>
 @endsection
