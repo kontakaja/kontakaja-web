@@ -16,10 +16,11 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $filters = $request->only('search');
         $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
-        $cari_contact = Contact::where('user_id', auth()->user()->id)->filter(request(['search']))->get();
+        $cari_contact = Contact::where('user_id', auth()->user()->id)->filter($filters)->get();
         $contact = Contact::where('user_id', auth()->user()->id)->get();
         $user = Auth::user()->username;
 
