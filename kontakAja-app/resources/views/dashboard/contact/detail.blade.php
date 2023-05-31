@@ -11,13 +11,13 @@
                 </div>
                 <div class="detail-contact-middle">
                   <div class="profile-pic">
-                    <img src="" alt="">
+                    <img src="" alt="Contact profile {{ $user }}">
                   </div>
                   <div class="detail-item">
                     <h1 class="contact-name">Anggoro</h1>
                     <h2 class="contact-category">Keluarga</h2>
                   </div>
-              
+
                   <div class="button-vertical">
                     <div class="whatsapp">
                       <a class="far fa-comment-dots"></a>

@@ -19,8 +19,9 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('name');
             $table->string('phone_number');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->text('address');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

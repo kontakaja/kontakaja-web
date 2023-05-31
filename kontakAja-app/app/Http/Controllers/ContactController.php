@@ -7,6 +7,8 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class ContactController extends Controller
 {
@@ -57,9 +59,16 @@ class ContactController extends Controller
             'name' => 'required|max:40',
             'category_id' => 'required',
             'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
-            'email' => 'required|email:dns',
-            'address' => 'required|max:100'
+            'email' => 'nullable|email',
+            'address' => 'required|max:100',
+            'image' => 'image|file|max:3000'
         ]);
+
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('contact-images');
+
+            // $resizedImage = Image::make(storage_path('app/' . $validatedData['image']))->resize(500, 500)->encode();
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
 
@@ -106,7 +115,7 @@ class ContactController extends Controller
             'name' => 'required|max:40',
             'category_id' => 'required',
             'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
-            'email' => 'required|email:dns',
+            'email' => 'nullable|email',
             'address' => 'required|max:100'
         ]);
 

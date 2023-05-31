@@ -24,7 +24,7 @@ class PasswordResetLinkController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required|email:dns',
+            'email' => 'required|email',
         ]);
 
         $status = Password::sendResetLink(

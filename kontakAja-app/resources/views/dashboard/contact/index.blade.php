@@ -13,7 +13,8 @@
                             <form class="toolbox__search" action="/dashboard/contacts">
                                 <div class="input-group input-group--white input-group--prepend input-group-lg">
                                     <input type="text" class="form-control" placeholder="Cari kontak"
-                                        aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ request('search') }}" name="search" autocomplete="off">
+                                        aria-label="Recipient's username" aria-describedby="button-addon2"
+                                        value="{{ request('search') }}" name="search" autocomplete="off">
                                     <button class="btn btn-outline-primary" type="submit"
                                         id="button-addon2">Search</button>
                                 </div>
@@ -43,8 +44,8 @@
                                 <div class="card__container">
                                     <div class="card__body">
                                         <div class="contact-card__avatar">
-                                            <svg viewBox="0 0 252 272" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            {{-- <svg viewBox="0 0 252 272" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"> --}}
                                                 <g filter="url(#filter0_dd)">
                                                     <path
                                                         d="M55 199H197V221C197 221 153.752 224 126 224C98.248 224 55 221 55 221V199Z"
@@ -107,12 +108,19 @@
                                                         <use xlink:href="#avatarImage0" transform="scale(0.00142857)">
                                                         </use>
                                                     </pattern>
-                                                    <image id="avatarImage0" width="700" height="700"
-                                                        xlink:href="img/content/humans-2/item-1.jpg"></image>
+                                                    @if ($contact->image)
+                                                    <div style="height: 200px; width: 200px;" class="rounded-circle">
+                                                        <img src="{{ asset('storage/' . $contact->image) }}"
+                                                        alt="Contact image {{ $user }}" class="rounded-circle" width="200px" height="200px">
+                                                    </div>
+                                                    @else
+                                                        <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
+                                                            alt="Contact image {{ $user }}" class="rounded-circle">
+                                                    @endif
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <h4 class="contact-card__title">{{ $contact->name }}</h4>
+                                        <h4 class="contact-card__title mt-4">{{ $contact->name }}</h4>
                                         <div class="contact-card__label"><span
                                                 class="label label--primary">{{ $contact->category->name }}</span>
                                         </div>
