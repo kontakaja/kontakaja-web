@@ -13897,7 +13897,8 @@ span.flatpickr-weekday {
 }
 
 .profile-pic:hover {
-  box-shadow: 0 0 8px 5px var(--primary);
+  box-shadow: 0 0 8px 0px black;
+  border: 5px solid white;
 }
 
 .profile-pic i {
@@ -13906,27 +13907,6 @@ span.flatpickr-weekday {
   top: 6.5rem;
   font-size: 1.2rem;
   color: var(--green);
-}
-
-.detail-contact-middle h1 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: var(--secondary);
-}
-
-.detail-contact-middle h2 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: var(--grey);
-}
-
-.detail-contact-middle p {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--grey);
-  padding-bottom: 1rem;
-  font-size: 0.9rem;
-  text-align: center;
-  color: var(--grey);
 }
 
 .button-vertical {
@@ -13938,52 +13918,74 @@ span.flatpickr-weekday {
   text-decoration: none;
 }
 
-.button-vertical div {
-  border: 1px solid black;
+.detail-item .contact-name {
+  font-size: 2rem;
+}
+
+.detail-item .contact-category {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.btn-floating {
   width: 10rem;
-  height: 3.5rem;
+  height: 4rem;
   line-height: 1.5rem;
   justify-content: center;
   text-align: center;
   border-radius: 10px;
+  padding-top: 5px;
   cursor: pointer;
-  color: black;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.button-vertical div:hover {
-  background-color: #FFAEBC;
   color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 10px 10px 10px -1px rgba(10, 99 ,1689, 0.16),
+              -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
 }
 
-.button-vertical div h3{
-  font-family: Roboto;
-  font-size: 15px;
+.btn-floating.whatsapp {
+  background-color: green;
 }
 
-.button-vertical div a {
-  font-size: 20px;
-  margin-top: 5px;
+.btn-floating.telepon {
+  background-color: blue;
 }
 
-.button-horizontal {
-  margin-top: 10px;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-  justify-content: center;
+.btn-floating.maps {
+  background-color: red;
+}
+
+.btn-floating.whatsapp:hover {
+  background-color: white;
+  border: 2px solid green;
+  color: green
+
+}
+
+.btn-floating.telepon:hover {
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
+
+}
+
+.btn-floating.maps:hover {
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+}
+
+.box-detail {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  line-height: 5px; 
+  margin: 10px;
+  width: 300px;
+}
+
+.box-detail h3{
+  margin: 5px;
   text-align: center;
-}
-.button-horizontal h3 {
-  font-size: 15px;
-}
-
-.button-horizontal h2 {
-  font-size: 20px;
-}
-
-.button-horizontal a {
-  font-size: 20px;
 }
 
 .detail-contact .delete h3 {
@@ -13994,10 +13996,7 @@ span.flatpickr-weekday {
 
 .detail-contact .delete h3:hover {
   color: red;
-  
 }
-
-
 
 .profile-card-bottom {
   display: flex;

@@ -7,37 +7,42 @@
                 <div class="backdrop"></div>
                 <div class="detail-contact-top">
                     <a class="fa-solid fa-arrow-left-long"></a>
-                    <a class="edit-contact">Edit Kontak</a>
+                    <a class="fa-solid fa-pen-to-square"></a>
                 </div>
                 <div class="detail-contact-middle">
                   <div class="profile-pic">
-                    <img src="" alt="Contact profile {{ $user }}">
+                    {{-- <img src="" alt="Contact profile {{ $user }}"> --}}
                   </div>
                   <div class="detail-item">
                     <h1 class="contact-name">Anggoro</h1>
                     <h2 class="contact-category">Keluarga</h2>
                   </div>
-
                   <div class="button-vertical">
-                    <div class="whatsapp">
-                      <a class="far fa-comment-dots"></a>
-                      <h3>WhatsApp</h3>
+                    <a href="https://wa.me/number.." target="_blank">
+                        <button class="btn-floating whatsapp">
+                            <i class="fa fa-whatsapp" style="font-size:28px;"></i>
+                            <h3>WhatsApp</h3>
+                        </button>
+                    </a>
+                    <a href="tel:#number">
+                        <button class="btn-floating telepon">
+                            <i class="fa fa-phone" style="font-size:28px;"></i>
+                            <h3>Telepon</h3>
+                        </button>
+                    </a>
+                    <a href="link">
+                        <button class="btn-floating maps">
+                            <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
+                            <h3>Maps</h3>
+                        </button>
+                    </a>
+                </div>
+                <div class="button-horizontal">
+                    <div class="box-detail number">
+                        <h3>081123456789</h3>
                     </div>
-                    <div>
-                        <a class="fa fa-phone" href="tel:#"></a>
-                        <h3>Telepon</h3>
-                    </div>
-                    <div>
-                        <a class="fa-solid fa-location-dot"></a>
-                        <h3>Maps</h3>
-                    </div>
-                  </div>
-                  <div class="button-horizontal">
-                    <div class="number">
-                          <h2>081283612300</h2>
-                    </div>
-                    <div class="email">
-                        <a href="mailto:#">example@mail.com</a>
+                    <div class="box-detail email">
+                        <h3><a href="mailto:#">example@mail.com</a></h3>
                     </div>
                   </div>
                 </div>
