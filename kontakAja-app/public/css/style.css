@@ -13850,7 +13850,7 @@ span.flatpickr-weekday {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0.8rem 1rem;
 }
 
@@ -13943,35 +13943,36 @@ span.flatpickr-weekday {
 }
 
 .btn-floating.whatsapp {
-  background-color: green;
+  background-color: white;
+  border: 2px solid green;
+  color: green;
 }
 
 .btn-floating.telepon {
-  background-color: blue;
-}
-
-.btn-floating.maps {
-  background-color: red;
-}
-
-.btn-floating.whatsapp:hover {
-  background-color: white;
-  border: 2px solid green;
-  color: green
-
-}
-
-.btn-floating.telepon:hover {
   background-color: white;
   border: 2px solid blue;
   color: blue;
-
 }
 
-.btn-floating.maps:hover {
+.btn-floating.maps {
   background-color: white;
   border: 2px solid red;
   color: red;
+}
+
+.btn-floating.whatsapp:hover {
+  background-color: green;
+  color: white;
+}
+
+.btn-floating.telepon:hover {
+  background-color: blue;
+  color: white;
+}
+
+.btn-floating.maps:hover {
+  background-color: red;
+  color: white;
 }
 
 .box-detail {
@@ -13980,12 +13981,23 @@ span.flatpickr-weekday {
   color: black;
   line-height: 5px; 
   margin: 10px;
-  width: 300px;
+  width: 250px;
+  background-color: white;
+  text-align: center;
 }
 
 .box-detail h3{
   margin: 5px;
   text-align: center;
+}
+
+.box-detail.number{
+  justify-content: center;
+  text-align: center;
+}
+
+.box-detail.email{
+  width: 300px;
 }
 
 .detail-contact .delete h3 {
