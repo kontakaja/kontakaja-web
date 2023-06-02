@@ -18,7 +18,7 @@
                     <h2 class="contact-category">Keluarga</h2>
                   </div>
                   <div class="button-vertical">
-                    <a href="https://wa.me/number.." target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=62 (code)" target="_blank">
                         <button class="btn-floating whatsapp">
                             <i class="fa fa-whatsapp" style="font-size:28px;"></i>
                             <h3>WhatsApp</h3>
@@ -30,7 +30,7 @@
                             <h3>Telepon</h3>
                         </button>
                     </a>
-                    <a href="link">
+                    <a href="https://goo.gl/maps/">
                         <button class="btn-floating maps">
                             <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
                             <h3>Maps</h3>
