@@ -3,13 +3,6 @@
 @section('container')
     <div class="container">
         <div class="body-main">
-            <div class="filter"></div>
-            <div class="alert-left">
-                <div class="alert"></div>
-            </div>
-            <div class="alert-right">
-                <div class="alert"></div>
-            </div>
             <div class="box">
                 <i class="fa-solid fa-xmark"></i>
                 <h2 class="title">Edit</h2>
