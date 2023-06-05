@@ -51,21 +51,6 @@ Route::controller(NewPasswordController::class)->group(function () {
     Route::post('reset-password', 'store')->name('password.update')->middleware('guest');
 });
 
-// Bagian About Us
-Route::get('/about', function () {
-    return view ("about", ["title" => "About"]);
-})->name("about")->middleware('guest');
-
-//Bagian Contact Us
-Route::get('/contact', function () {
-    return view('contactUs', ["title" => "Contact"]);
-})->name("contact")->middleware('guest');
-
-//Bagian Process
-Route::get('/process', function () {
-    return view ("process", ["title" => "Process"]);
-})->name("process")->middleware('guest');
-
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware('auth');
 
