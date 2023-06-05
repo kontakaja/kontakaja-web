@@ -41,13 +41,13 @@ const createListElement = (newTodo) => {
     date.innerText = getDate;
     todoList.appendChild(date);
 
-    const row = document.createElement("div");
-    row.className = "row";
-    todoList.appendChild(row);
+    const todorow = document.createElement("div");
+    todorow.className = "todorow";
+    todoList.appendChild(todorow);
 
     const todos = document.createElement("div");
     todos.className = "todos";
-    row.appendChild(todos);
+    todorow.appendChild(todos);
 
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
@@ -57,7 +57,7 @@ const createListElement = (newTodo) => {
     checkbox.id = id;
     todos.appendChild(checkbox);
 
-    const todoLabel = document.createElement("label");
+    const todoLabel = document.createElement("labeltodo");
     todoLabel.setAttribute("for", id);
     todoLabel.innerText = text;
     todos.appendChild(todoLabel);
@@ -72,7 +72,7 @@ const createListElement = (newTodo) => {
 
     const circle = document.createElement("div");
     circle.className = `circle ${priority}`;
-    row.appendChild(circle);
+    todorow.appendChild(circle);
 };
 
 const todoCountFunc = (todoArray) => {
