@@ -44,6 +44,14 @@ return [
             'throw' => false,
         ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => public_path('storage'),
+        //     'url' => env('APP_URL') . '/storage',
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        // ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -53,6 +61,14 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+            'throw' => false,
+        ],
+
+        'foto_resized' => [
+            'driver' => 'local',
+            'root' => public_path('storage/foto_resized'),
+            'url' => env('APP_URL').'/storage/foto_resized',
+            'visibility' => 'public',
             'throw' => false,
         ],
 

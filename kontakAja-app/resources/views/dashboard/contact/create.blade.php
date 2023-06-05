@@ -123,13 +123,6 @@
 
             const oFReader = URL.createObjectURL(image.files[0]);
             imgPreview.src = oFReader;
-
-            // const oFReader = new FileReader();
-            // oFReader.readAsDataURL(image.files[0]);
-
-            // oFReader.onload = function(oFREvent) {
-            //     imgPreview.src = oFREvent.target.result;
-            // }
         }
     </script>
 @endsection

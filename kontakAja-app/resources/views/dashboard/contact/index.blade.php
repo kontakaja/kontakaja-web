@@ -109,9 +109,9 @@
                                                         </use>
                                                     </pattern>
                                                     @if ($contact->image)
-                                                    <div style="height: 200px; width: 200px;" class="rounded-circle">
+                                                    <div>
                                                         <img src="{{ asset('storage/' . $contact->image) }}"
-                                                        alt="Contact image {{ $user }}" class="rounded-circle" width="200px" height="200px">
+                                                        alt="Contact image {{ $user }}" class="rounded-circle">
                                                     </div>
                                                     @else
                                                         <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
