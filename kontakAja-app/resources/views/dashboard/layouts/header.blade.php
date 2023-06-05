@@ -16,9 +16,9 @@
                         @auth
                             <a class="header__profile-toggle dropdown__toggle" href="#"
                                 data-toggle="dropdown" role="button" aria-expanded="false" title="Name">
-                                <div class="header__profile-image"><span
-                                        class="header__profile-image-text">MA</span>
-                                    <img src="{{ asset('img/content/humans/item-4.jpg') }}" alt="Image profile {{ $user }}" />
+                                <div class="header__profile-image"><span>
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
                                 </div>
                                 <div class="header__profile-text"><span>{{ $user }}</span>
                                 </div><span class="icon-arrow-down">
