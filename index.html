@@ -392,7 +392,8 @@
 
                     <div class="col-lg-8 contact-form wow fadeInLeft">
                         <h2>Ada pertanyaan? <strong>Mari bertanya kepada kami dibawah ini</strong></h2>
-                        <form action="https://formsubmit.io/send/mykontakaja@gmail.com" method="POST" class="contact-form">
+                        <form action="https://formsubmit.co/mykontakaja@gmail.com" method="POST" class="contact-form">
+                            <input type="hidden" name="_template" value="table">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -417,15 +418,14 @@
                                         <textarea class="form-control" id="comments" name="comments" placeholder="Jelaskan pertanyaan Anda *"></textarea>
                                     </div>
                                 </div>
-                                <input name="_formsubmit_id" type="text" style="display:none">
+                                <input type="hidden" name="_next" value="https://go.catkay.com/WDwq2">
+                                <input type="hidden" name="_captcha" value="false">
                                 <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
+                                    <button type="submit" id="submit">
                                         Kirim pesan <i class="fa fa-paper-plane"></i>
                                     </button>
                                 </div>
-                                <div class="col-lg-12 alert-notification">
-                                    <div id="message" class="alert-msg"></div>
-                                </div>
+                                <input type="hidden" name="_captcha" value="false">
                             </div>
                         </form>
                     </div>
