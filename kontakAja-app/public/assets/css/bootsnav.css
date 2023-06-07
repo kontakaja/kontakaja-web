@@ -1379,7 +1379,7 @@ nav.navbar.bootsnav {
         color: #ffffff;
     }
 
-    .attr-nav.extra-color > ul > li.side-menu > a {
+    .attr-nav.extra-color > ul > li.try-us > a {
         display: inline-block;
         padding: 0 !important;
         background: #ffffff;
@@ -1392,11 +1392,11 @@ nav.navbar.bootsnav {
         box-shadow: 0 0 10px #cccccc;
     }
 
-    .cornflower-blue .attr-nav.extra-color > ul > li.side-menu > a {
+    .cornflower-blue .attr-nav.extra-color > ul > li.try-us > a {
         color: #00a2aa !important;
     }
 
-    .orange .attr-nav.extra-color > ul > li.side-menu > a {
+    .orange .attr-nav.extra-color > ul > li.try-us > a {
         color: #ff5621 !important;
     }
 
@@ -1413,7 +1413,7 @@ nav.navbar.bootsnav {
         color: #232323;
     }
 
-    .eastern-blue .attr-nav.extra-color > ul > li.side-menu > a {
+    .eastern-blue .attr-nav.extra-color > ul > li.try-us > a {
         display: inline-block;
         padding: 0 !important;
         background: #1baaa0;
@@ -3075,7 +3075,7 @@ nav.navbar-transparent .attr-nav > ul > li.contact i {
     padding: 8px 10px !important;
 }
 
-.attr-nav > ul > li.side-menu > a {
+.attr-nav > ul > li.try-us > a {
     padding-right: 0 !important;
 }
 

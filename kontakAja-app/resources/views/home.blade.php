@@ -52,7 +52,7 @@
                     <div class="attr-nav extra-color">
                         <ul>
                             {{-- <li class="side-menu"><a href="/login">Coba yuk!</a></li> --}}
-                            <li><a href="/login">Coba yuk!</a></li>
+                            <li class="try-us"><a href="/login">Coba yuk!</a></li>
                         </ul>
                     </div>
                     <div class="navbar-header">
