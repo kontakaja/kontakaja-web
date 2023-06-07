@@ -52,7 +52,7 @@
                     <div class="attr-nav extra-color">
                         <ul>
                             {{-- <li class="side-menu"><a href="/login">Coba yuk!</a></li> --}}
-                            <li><a href="/login">Coba yuk!</a></li>
+                            <li class="try-us"><a href="/login">Coba yuk!</a></li>
                         </ul>
                     </div>
                     <div class="navbar-header">
@@ -85,7 +85,7 @@
                     <div class="row align-center">
                         <div class="col-lg-8 offset-lg-2 info">
                             <h2 class="wow fadeInDown" style="font-size: 30pt;" data-wow-duration="1s"><strong>Connect Easily, Going Fastly</strong> With KontakAja!</h2>
-                            <a class="btn circle btn-md btn-light effect wow fadeInUp" data-wow-duration="1.8s" href="#">Coba Sekarang</a>
+                            <a class="btn circle btn-md btn-light effect wow fadeInUp" data-wow-duration="1.8s" href="/login">Coba Sekarang</a>
                         </div>
                         <div class="col-lg-8 offset-lg-2 wow fadeInRight" data-wow-duration="1s">
                             <div class="thumb-innner">
