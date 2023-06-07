@@ -8416,11 +8416,11 @@ span.flatpickr-weekday {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -8428,6 +8428,9 @@ span.flatpickr-weekday {
   cursor: pointer;
   -webkit-transition: var(--t-base);
   transition: var(--t-base);
+  -moz-transition: var(--t-base);
+  -ms-transition: var(--t-base);
+  -o-transition: var(--t-base);
 }
 
 .modal__close:hover {
@@ -8464,7 +8467,7 @@ span.flatpickr-weekday {
 }
 
 .modal-compact .modal__wrap {
-  max-width: 580px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -8507,21 +8510,30 @@ span.flatpickr-weekday {
   z-index: 2;
   width: 100%;
   -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
+  transform: translateY(-40%);
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .modal.is-animate .modal__window {
-  -webkit-transform: translate(0);
+          -webkit-transform: translate(0);
           transform: translate(0);
+          -moz-transform: translate(0);
+          -ms-transform: translate(0);
+          -o-transform: translate(0);
 }
 
 .modal-compact.is-animate .modal__window {
-  -webkit-transform: translateY(0);
+          -webkit-transform: translateY(0);
           transform: translateY(0);
-  opacity: 1;
+          opacity: 1;
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
 }
 
 .modal__content {
@@ -8548,7 +8560,11 @@ span.flatpickr-weekday {
   max-width: calc(100% - 20px);
   border-radius: var(--card-border-radius);
   -webkit-box-shadow: 0px 4px 8px rgba(169, 194, 209, 0.25), 0px 16px 32px rgba(169, 194, 209, 0.25);
-          box-shadow: 0px 4px 8px rgba(169, 194, 209, 0.25), 0px 16px 32px rgba(169, 194, 209, 0.25);
+  box-shadow: 0px 4px 8px rgba(169, 194, 209, 0.25), 0px 16px 32px rgba(169, 194, 209, 0.25);
+  -webkit-border-radius: var(--card-border-radius);
+  -moz-border-radius: var(--card-border-radius);
+  -ms-border-radius: var(--card-border-radius);
+  -o-border-radius: var(--card-border-radius);
 }
 
 .modal__content-wrap {
@@ -13789,7 +13805,7 @@ span.flatpickr-weekday {
 /*Detail Contact*/
 .detail-contact {
   position: relative;
-  width: 1000px;
+  width: 900px;
   background-color: var(--white);
   padding-bottom: 0.5rem;
   border-radius: 10px;
@@ -13804,7 +13820,7 @@ span.flatpickr-weekday {
   top: 0;
   left: 0;
   right: 0;
-  height: 12rem;
+  height: 10rem;
   background-color: #F8FAFB;
   z-index: -1;
 }
@@ -13855,8 +13871,12 @@ span.flatpickr-weekday {
   background-size: cover;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
   transition: box-shadow 0.3s ease-in-out;
-  background-image: url(https://picsum.photos/seed/picsum/200/300);
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -ms-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
 }
 
 .profile-pic:hover {
