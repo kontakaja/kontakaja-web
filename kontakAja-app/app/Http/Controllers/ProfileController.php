@@ -16,7 +16,15 @@ class ProfileController extends Controller
      */
     public function index() {
         $user = Auth::user()->username;
-        return view("dashboard.profile.index", ["title" => "Profile"])->with('user', $user);
+        $name = Auth::user()->name;
+        $email = Auth::user()->email;
+        $emailVerifiedAt = Auth::user()->email_verified_at;
+        return view("dashboard.profile.index", ["title" => "Profile"])->with([
+            'user' => $user,
+            'email' => $email,
+            'name' => $name,
+            'emailVerifiedAt' => $emailVerifiedAt
+        ]);
     }
 
     // public function edit(Request $request): View

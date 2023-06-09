@@ -18,7 +18,7 @@
                     <h2 class="contact-category">Keluarga</h2>
                   </div>
                   <div class="button-vertical">
-                    <a href="https://api.whatsapp.com/send?phone=62 (code)" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=62{{ $contact->phone_number }}" target="_blank">
                         <button class="btn-floating whatsapp">
                             <i class="fa fa-whatsapp" style="font-size:28px;"></i>
                             <h3>WhatsApp</h3>
@@ -39,10 +39,10 @@
                 </div>
                 <div class="button-horizontal">
                     <div class="box-detail number">
-                        <h3>081123456789</h3>
+                        <h3>{{ $contact->phone_number }}</h3>
                     </div>
                     <div class="box-detail email">
-                        <h3><a href="mailto:#">example@mail.com</a></h3>
+                        <h3><a href="mailto:#">{{ $contact->email }}</a></h3>
                     </div>
                   </div>
                 </div>

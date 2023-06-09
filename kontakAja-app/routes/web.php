@@ -57,7 +57,6 @@ Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard
 
 // Bagian Profile Dashboard
 Route::get('/dashboard/profile', [ProfileController::class, "index"])->name("profile")->middleware('auth');
-// Route::get('/dashboard/profile', [ProfileController::class, "index"])->name("profile")->middleware('auth');
 
 // Bagian Contact Dashboard
 Route::controller(ContactController::class)->group(function () {
@@ -74,8 +73,3 @@ Route::get('/dashboard/todo', function () {
     $user = Auth::user()->username;
     return view ("dashboard.todo.index", ["title" => "Todo"])->with('user', $user);
 })->name("todo")->middleware('auth');
-
-Route::get('/dashboard/testi', function () {
-    return view("dashboard.testi" , ["title" => "Test"]);
-})->name("testi")->middleware('auth');
-

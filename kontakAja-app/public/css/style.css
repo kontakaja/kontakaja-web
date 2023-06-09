@@ -13962,7 +13962,7 @@ span.flatpickr-weekday {
   border: 1px solid black;
   border-radius: 5px;
   color: black;
-  line-height: 5px; 
+  line-height: 5px;
   margin: 10px;
   width: 250px;
   background-color: white;
@@ -13991,6 +13991,38 @@ span.flatpickr-weekday {
 
 .detail-contact .delete h3:hover {
   color: red;
+}
+
+.profile-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.profile-card h2 {
+    margin-top: 0;
+}
+
+.profile-card p {
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    font-weight: bold;
+}
+
+.list-group-item a:hover {
+    color: black;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .profile-card {
+        max-width: 100%;
+    }
 }
 
 .profile-card-bottom {
@@ -14819,6 +14851,16 @@ span.flatpickr-weekday {
   min-height: 100vh;
   padding: 80px 15px 30px;
 }
+
+/* @media (min-width: 1024px) {
+    .logo-display {
+        display: block;
+    }
+
+    .logo-scrolled {
+        display: block;
+    }
+} */
 
 @media (min-width: 768px) {
   .page-auth__center {

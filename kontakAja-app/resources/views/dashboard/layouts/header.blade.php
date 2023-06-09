@@ -16,7 +16,8 @@
                         @auth
                             <a class="header__profile-toggle dropdown__toggle" href="#" data-toggle="dropdown"
                                 role="button" aria-expanded="false" title="Name">
-                                <div class="header__profile-image"><span>
+                                <div class="header__profile-image">
+                                    <span>
                                         <i class="fa-solid fa-user"></i>
                                     </span>
                                 </div>
@@ -27,7 +28,8 @@
                                     </svg></span>
                             </a>
                             <div class="profile-dropdown dropdown-menu dropdown-menu--right">
-                                <a class="profile-dropdown__item dropdown-menu__item" href="/dashboard/profile" tabindex="0">
+                                <a class="profile-dropdown__item dropdown-menu__item" href="/dashboard/profile"
+                                    tabindex="0">
                                     <span class="profile-dropdown__icon">
                                         <svg class="icon-icon-user">
                                             <use xlink:href="#icon-user"></use>
@@ -38,7 +40,8 @@
                                 <form action="/logout" method="post">
                                     @csrf
                                     <div class="dropdown-menu__divider"></div>
-                                    <button type="submit" class="profile-dropdown__item dropdown-menu__item" tabindex="0">
+                                    <button type="submit" class="profile-dropdown__item dropdown-menu__item"
+                                        tabindex="0">
                                         <span class="profile-dropdown__icon">
                                             <svg class="icon-icon-logout">
                                                 <use xlink:href="#icon-logout"></use>
