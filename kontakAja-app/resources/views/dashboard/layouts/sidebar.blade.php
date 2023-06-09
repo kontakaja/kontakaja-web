@@ -4,7 +4,7 @@
         <div class="sidebar__top">
             <div class="container container--sm">
                 <a class="sidebar__logo" href="index.html">
-                    <img class="sidebar__logo-icon" src="{{ asset('img/content/logo-scroll.svg') }}" alt="Logo KontakAja!"
+                    <img class="sidebar__logo-icon" src="{{ asset('img/content/logotype.svg') }}" alt="Logo KontakAja!"
                         width="44" />
                 </a>
             </div>
