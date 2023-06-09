@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PasswordResetLinkController;
 use App\Http\Controllers\NewPasswordController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,6 +55,10 @@ Route::controller(NewPasswordController::class)->group(function () {
 // Bagian Dashboard
 Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware('auth');
 
+// Bagian Profile Dashboard
+Route::get('/dashboard/profile', [ProfileController::class, "index"])->name("profile")->middleware('auth');
+// Route::get('/dashboard/profile', [ProfileController::class, "index"])->name("profile")->middleware('auth');
+
 // Bagian Contact Dashboard
 Route::controller(ContactController::class)->group(function () {
     Route::get('/dashboard/contacts', "index")->name("index-contact")->middleware('auth');
@@ -69,4 +74,8 @@ Route::get('/dashboard/todo', function () {
     $user = Auth::user()->username;
     return view ("dashboard.todo.index", ["title" => "Todo"])->with('user', $user);
 })->name("todo")->middleware('auth');
+
+Route::get('/dashboard/testi', function () {
+    return view("dashboard.testi" , ["title" => "Test"]);
+})->name("testi")->middleware('auth');
 

@@ -30,6 +30,18 @@
                                     <use xlink:href="#icon-todo"></use>
                                 </svg></span><span class="sidebar__link-text">Todo</span></span></a>
                     </li>
+                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard/profile"
+                            aria-expanded="true"><span class="sidebar__link-icon">
+                                <svg class="icon-icon-user">
+                                    <use xlink:href="#icon-user"></use>
+                                </svg></span><span class="sidebar__link-text">My Profile</span></span></a>
+                    </li>
+                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard/testi"
+                            aria-expanded="true"><span class="sidebar__link-icon">
+                                <svg class="icon-icon-user">
+                                    <use xlink:href="#icon-user"></use>
+                                </svg></span><span class="sidebar__link-text">Test</span></span></a>
+                    </li>
                 </ul>
             </nav>
         </div>
