@@ -2,9 +2,7 @@
 @section('container')
     <div class="create">
         <div class="container">
-
             <div class="modal__content">
-
                 <div class="modal__header">
                     <div class="modal__container">
                         <h2 class="modal__title">Tambah Kontak</h2>

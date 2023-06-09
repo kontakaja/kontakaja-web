@@ -100,54 +100,55 @@
                             <div class="detail-contact-container">
                                 <div class="detail-contact">
                                     <div class="backdrop"></div>
+
                                     <div class="detail-contact-middle">
                                         @if ($contact->image)
-                                            <div>
-                                                <img src="{{ asset('storage/' . $contact->image) }}"
-                                                    alt="Contact image {{ $user }}" class="profile-pic">
-                                            </div>
-                                        @else
-                                            <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
-                                                alt="Contact image {{ $user }}" class="profile-pic">
-                                        @endif
-                                        <div class="detail-item">
-                                            <h1 class="contact-name">{{ $contact->name }}</h1>
-                                            <h2 class="contact-category">Keluarga</h2>
+                                                        <div>
+                                                            <img src="{{ asset('storage/' . $contact->image) }}"
+                                                            alt="Contact image {{ $user }}" class="profile-pic">
+                                                        </div>
+                                                        @else
+                                                            <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
+                                                                alt="Contact image {{ $user }}" class="profile-pic">
+                                                        @endif
+                                      <div class="detail-item">
+                                        <h1 class="contact-name">Anggoro</h1>
+                                        <h2 class="contact-category">Keluarga</h2>
+                                      </div>
+                                      <div class="button-vertical">
+                                        <a href="https://api.whatsapp.com/send?phone=62 (code)" target="_blank">
+                                            <button class="btn-floating whatsapp">
+                                                <i class="fab fa-whatsapp" style="font-size:28px;"></i>
+                                                <h3>WhatsApp</h3>
+                                            </button>
+                                        </a>
+                                        <a href="tel:#number">
+                                            <button class="btn-floating telepon">
+                                                <i class="fa fa-phone" style="font-size:28px;"></i>
+                                                <h3>Telepon</h3>
+                                            </button>
+                                        </a>
+                                        <a href="https://goo.gl/maps/">
+                                            <button class="btn-floating maps">
+                                                <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
+                                                <h3>Maps</h3>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="button-horizontal">
+                                        <div class="box-detail number">
+                                            <h3>081123456789</h3>
                                         </div>
-                                        <div class="button-vertical">
-                                            <a href="https://api.whatsapp.com/send?phone=62 (code)" target="_blank">
-                                                <button class="btn-floating whatsapp">
-                                                    <i class="fab fa-whatsapp" style="font-size:28px;"></i>
-                                                    <h3>WhatsApp</h3>
-                                                </button>
-                                            </a>
-                                            <a href="tel:#number">
-                                                <button class="btn-floating telepon">
-                                                    <i class="fa fa-phone" style="font-size:28px;"></i>
-                                                    <h3>Telepon</h3>
-                                                </button>
-                                            </a>
-                                            <a href="https://goo.gl/maps/">
-                                                <button class="btn-floating maps">
-                                                    <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
-                                                    <h3>Maps</h3>
-                                                </button>
-                                            </a>
+                                        <div class="box-detail email">
+                                            <h3><a href="mailto:#">example@mail.com</a></h3>
                                         </div>
-                                        <div class="button-horizontal">
-                                            <div class="box-detail number">
-                                                <h3>081123456789</h3>
-                                            </div>
-                                            <div class="box-detail email">
-                                                <h3><a href="mailto:#">example@mail.com</a></h3>
-                                            </div>
-                                        </div>
+                                      </div>
                                     </div>
                                     <div class="delete">
                                         <h3>Delete</h3>
                                     </div>
 
-                                </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
