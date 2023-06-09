@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+{{-- @extends('dashboard.layouts.main')
 
 @section('container')
     <div class="container">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="detail-contact-middle">
                   <div class="profile-pic">
-                    {{-- <img src="" alt="Contact profile {{ $user }}"> --}}
+                    <img src="" alt="Contact profile {{ $user }}">
                   </div>
                   <div class="detail-item">
                     <h1 class="contact-name">Anggoro</h1>
@@ -53,4 +53,4 @@
               </div>
         </div>
     </div>
-@endsection
+@endsection --}}

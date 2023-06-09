@@ -13831,6 +13831,11 @@ span.flatpickr-weekday {
   justify-content: space-between;
   font-size: 1.5rem;
   padding: 0.8rem 1rem;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
 
 .detail-contact-top a:hover {
@@ -13912,7 +13917,7 @@ span.flatpickr-weekday {
 
 .btn-floating {
   width: 10rem;
-  height: 4rem;
+  height: 4.5rem;
   line-height: 1.5rem;
   justify-content: center;
   text-align: center;
@@ -13975,21 +13980,22 @@ span.flatpickr-weekday {
 }
 
 .box-detail.number{
-  justify-content: center;
   text-align: center;
+  width: 300px;
 }
 
 .box-detail.email{
   width: 300px;
 }
 
-.detail-contact .delete h3 {
+.detail-delete {
   text-align: center;
   margin-top: 10px;
   font-size: 15px;
+  justify-content: center;
 }
 
-.detail-contact .delete h3:hover {
+.detail-delete .btn-delete:hover {
   color: red;
 }
 
