@@ -73,7 +73,7 @@ class ContactController extends Controller
 
         Contact::create($validatedData);
 
-        return redirect('/dashboard/contacts')->with('success', 'New contact has been added!');
+        return redirect('/dashboard/contacts')->with('add', 'Berhasil menambahkan kontak!');
     }
 
     /**
@@ -137,7 +137,7 @@ class ContactController extends Controller
 
         Contact::where("id", $id)->update($validated_data);
 
-        return redirect('/dashboard/contacts')->with('success', 'Contact has been updated!');
+        return redirect('/dashboard/contacts')->with('update', 'Kontak berhasil diperbarui!');
     }
 
     /**
@@ -146,12 +146,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        $contact = Contact::findOrFail($id);
+        Contact::where("id", $id)->delete();
 
-        Contact::destroy($contact->id);
-
-        return redirect('/dashboard/contacts')->with('success', 'Contact has been deleted!');
+        return redirect('/dashboard/contacts')->with('delete', 'Kontak berhasil dihapus!');
     }
 }

@@ -1,5 +1,23 @@
 @extends('dashboard.layouts.main')
 @section('container')
+    @if (session()->has('add'))
+        <div class="alert alert-success text-center" role="alert" style="margin: 1rem 35%;">
+            {{ session('add') }}
+        </div>
+    @endif
+    @if (session()->has('update'))
+        <div class="alert alert-primary text-center" role="alert" style="margin: 1rem 35%;">
+            {{ session('update') }}
+        </div>
+    @endif
+    @if (session()->has('delete'))
+        <div class="alert alert-danger text-center" role="alert" style="margin: 1rem 35%;">
+            {{ session('delete') }}
+        </div>
+    @endif
+    {{-- <div class="alert alert-success text-center" role="alert" style="margin: 1rem 35%;">
+        TES DOANK YA BABIK
+    </div> --}}
     <div class="container">
         <div class="page-header">
             <h1 class="page-header__title">Kontak <span class="text-grey">({{ $total_contact }})</span></h1>
@@ -47,7 +65,8 @@
                                                 @if ($contact->image)
                                                     <div class="">
                                                         <img src="{{ asset('storage/' . $contact->image) }}"
-                                                            alt="Contact image {{ $user }}" class="rounded-circle" style="height: 200px; width: 200px;">
+                                                            alt="Contact image {{ $user }}" class="rounded-circle"
+                                                            style="height: 200px; width: 200px;">
                                                     </div>
                                                 @else
                                                     <div>
@@ -91,7 +110,7 @@
                                                     </svg>Nomor Telepon:
                                                 </div>
                                                 <div class="col-auto text-light-theme"><a
-                                                        href="tel:#">{{ $contact->phone_number }}</a>
+                                                        href="tel:{{ $contact->phone_number }}">{{ $contact->phone_number }}</a>
                                                 </div>
                                             </div>
                                         </div>

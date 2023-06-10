@@ -13988,6 +13988,10 @@ span.flatpickr-weekday {
   width: 300px;
 }
 
+.box-detail.address{
+  width: 300px;
+}
+
 .detail-delete {
   text-align: center;
   margin-top: 10px;

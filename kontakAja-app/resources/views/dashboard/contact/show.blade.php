@@ -32,13 +32,13 @@
                             <h3>WhatsApp</h3>
                         </button>
                     </a>
-                    <a href="tel:#number">
+                    <a href="tel:{{ $contact->phone_number }}">
                         <button class="btn-floating telepon">
                             <i class="fa fa-phone" style="font-size:28px;"></i>
                             <h3>Telepon</h3>
                         </button>
                     </a>
-                    <a href="https://goo.gl/maps/">
+                    <a href="https://goo.gl/maps/{{ $contact->address }}">
                         <button class="btn-floating maps">
                             <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
                             <h3>Maps</h3>
@@ -47,15 +47,22 @@
                 </div>
                 <div class="button-horizontal">
                     <div class="box-detail number">
-                        <h3><i class="fa fa-phone" style=""></i> {{ $contact->phone_number }}</h3>
+                        <h3><i class="fa fa-phone"></i> {{ $contact->phone_number }}</h3>
                     </div>
                     <div class="box-detail email">
-                        <h3><a href="mailto:#">{{ $contact->email }}</a></h3>
+                        <h3><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></h3>
+                    </div>
+                    <div class="box-detail address">
+                        <h3><i class="fas fa-map-marker-alt"></i> {{ $contact->address }}</h3>
                     </div>
                 </div>
             </div>
             <div class="detail-delete">
-                <button class="btn-delete">Delete</button>
+                <form action="{{ route('delete-contact', $contact->id)}}" method="post">
+                    @method('delete')
+                    @csrf
+                    <button class="btn-delete" onclick="return confirm('Apakah kamu yakin ingin menghapus kontak ini?')">Delete</button>
+                </form>
             </div>
         </div>
     </div>
