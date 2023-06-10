@@ -89,23 +89,21 @@
         <div class="modal__wrap">
             <div class="modal__window">
                 <div class="modal__content">
-                    <button class="detail-contact-top" data-dismiss="modal">
-                        <a class="fa-solid fa-arrow-left-long"></a>
-                    </button>
-                    {{-- <div class="detail-contact-top">
-                        <a class="fa-solid fa-pen-to-square"></a>
-                    </div> --}}
+                    <div class="detail-contact-top">
+                        <button class="detail-close" data-dismiss="modal">
+                            <a class="fa-solid fa-arrow-left-long"></a>
+                        </button>
+                        <button class="detail-edit">
+                            <a class="fa-solid fa-pen-to-square"></a>
+                        </button> 
+                    </div>
                     <div class="modal__body">
-                        <div class="modal__container">
-                            <div class="detail-contact-container">
-                                <div class="detail-contact">
-                                    <div class="backdrop"></div>
-
-                                    <div class="detail-contact-middle">
-                                        @if ($contact->image)
-                                            <div>
-                                                <img src="{{ asset('storage/' . $contact->image) }}"
-                                                    alt="Contact image {{ $user }}" class="profile-pic">
+                            <div class="modal__container">
+                                <div class="detail-contact-middle">
+                                    @if ($contact->image)
+                                        <div>
+                                            <img src="{{ asset('storage/' . $contact->image) }}"
+                                                alt="Contact image {{ $user }}" class="profile-pic">
                                             </div>
                                         @else
                                             <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
@@ -140,12 +138,12 @@
                                                 <h3>081123456789</h3>
                                             </div>
                                             <div class="box-detail email">
-                                                <h3><a href="mailto:#">example@mail.com</a></h3>
+                                                <h3><a href="mailto:#">{{ $contact->email }}</a></h3>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="delete">
-                                        <h3>Delete</h3>
+                                    <div class="detail-delete">
+                                        <button class="btn-delete">Delete</button>
                                     </div>
 
                                 </div>
