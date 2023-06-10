@@ -6,7 +6,7 @@
                 <a class="sidebar__logo" href="/" onclick="toggleLogo(event)">
                     <img class="sidebar__logo-icon logo-display" src="{{ asset('assets/img/logo.svg') }}"
                         alt="Logo KontakAja!" />
-                    <img src="{{ asset('assets/img/logo-scroll.svg') }}" class="logo-scrolled" alt="Logo" onclick="">
+                    <img src="{{ asset('assets/img/logo-scroll.svg') }}" class="logo-scrolled" alt="Logo">
                 </a>
             </div>
         </div>
@@ -36,6 +36,3 @@
         </div>
     </div>
 </aside>
-
-
-
