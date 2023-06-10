@@ -951,7 +951,7 @@ a.link-under:hover {
 }
 
 [data-theme="light"] .text-light-theme {
-    color: var(--text-secondary-color);
+    color: black;
 }
 
 [data-theme="dark"] .text-dark-theme {
@@ -1618,7 +1618,7 @@ html[data-theme="light"] .button--secondary:hover {
 
 .label--primary {
     color: var(--white-color);
-    background-color: var(--primary-color);
+    background-color: #FFAEBC;
 }
 
 /* Badges */
@@ -3475,7 +3475,7 @@ html[data-theme="light"] .button--secondary:hover {
                 -1);
     padding: 1.4667rem 0 1.7333rem;
     border-top: 1px solid var(--border-grey-color);
-    background-color: var(--card-footer-background);
+    background-color: #03F0FC;
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
 }
 
@@ -14463,6 +14463,7 @@ span.flatpickr-weekday {
     font-weight: 500;
     font-size: 2rem;
     line-height: 1.16667em;
+    text-decoration: none;
 }
 
 .contact-card__address {
@@ -14481,12 +14482,12 @@ span.flatpickr-weekday {
     align-items: center;
     grid-gap: 8px;
     grid-template-columns: repeat(1, 22px 1fr);
+    color: black;
 }
 
 .contact-card__address-left svg[class*="icon"] {
     width: 22px;
     height: 22px;
-    fill: var(--text-secondary-color);
 }
 
 /*Detail Contact*/
