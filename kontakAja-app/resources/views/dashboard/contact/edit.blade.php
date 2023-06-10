@@ -86,6 +86,7 @@
                                 </div>
                                 <div class="col-12 form-group form-group--lg">
                                     <label class="form-label form-label--sm" for="image">Foto</label>
+                                    <input type="hidden" name="oldImage" value="{{ $contact->image }}">
                                     @if ($contact->image)
                                         <img src="{{ asset('storage/' . $contact->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                                     @else

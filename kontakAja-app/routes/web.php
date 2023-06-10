@@ -66,7 +66,7 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/dashboard/contacts/store', "store")->name("store-contact")->middleware('auth');
     Route::get('/dashboard/contacts/edit/{id}Contact', "edit")->name("edit-contact")->middleware('auth');
     Route::post('/dashboard/contacts/update/{id}Contact', "update")->name("update-contact")->middleware('auth');
-    Route::delete('/dashboard/contacts/delete/{id}Contact', "delete")->name("delete-contact")->middleware('auth');
+    Route::delete('/dashboard/contacts/delete/{id}Contact', "destroy")->name("delete-contact")->middleware('auth');
 });
 
 // Bagian Todo Dashboard

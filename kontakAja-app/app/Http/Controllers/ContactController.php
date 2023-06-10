@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
-use Intervention\Image\ImageManagerStatic;
 
 class ContactController extends Controller
 {
@@ -136,6 +134,9 @@ class ContactController extends Controller
         $validatedData = $request->validate($rules);
 
         if($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
             $validatedData['image'] = $request->file('image')->store('contact-images');
         }
 
@@ -152,10 +153,16 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function destroy($id)
     {
-        Contact::where("id", $id)->delete();
+        $contact = Contact::findOrFail($id);
 
+        if ($contact->image) {
+            Storage::delete($contact->image);
+        }
+
+        Contact::destroy($id);
+        // Contact::where("id", $id)->delete();
         return redirect('/dashboard/contacts')->with('delete', 'Kontak berhasil dihapus!');
     }
 }
