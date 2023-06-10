@@ -24,12 +24,12 @@ class ContactController extends Controller
         $filters = $request->only('search');
         $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
         $cari_contact = Contact::where('user_id', auth()->user()->id)->filter($filters)->get();
-        $contact = Contact::where('user_id', auth()->user()->id)->get();
+        $contacts = Contact::where('user_id', auth()->user()->id)->get();
         $user = Auth::user()->username;
 
         return view("dashboard.contact.index", [
             "title" => "Dashboard",
-            "contacts" => $contact,
+            "contacts" => $contacts,
             "contacts" => $cari_contact,
         ])->with('user', $user)->with('total_contact', $total_contact);
     }
@@ -67,15 +67,6 @@ class ContactController extends Controller
 
         if($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('contact-images');
-
-            // $fullPath = public_path('storage/' . $validatedData['image']);
-
-            // $resizedImage = Image::make($fullPath)->resize(500, 500)->encode();
-
-            // $resizedPath = str_replace('contact-images', 'foto_resized', $validatedData['image']);
-            // Storage::put($resizedPath, $resizedImage);
-
-            // Storage::disk('public')->delete($validatedData['image']);
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -91,10 +82,19 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function show($id)
-    // {
 
-    // }
+    public function show($id)
+    {
+        $user = Auth::user()->username;
+        $contact = Contact::findOrFail($id);
+
+        // return view('dashboard.contact.show', compact('contact'));
+        return view('dashboard.contact.show', [
+            'title' => 'Detail Kontak',
+            'contact' => $contact,
+            'user' => $user
+        ]);
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -102,11 +102,16 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit($id)
     {
+        $user = Auth::user()->username;
+        $contact = Contact::findOrFail($id);
+
         return view('dashboard.contact.edit', [
+            'title' => 'Edit Kontak',
             'contact' => $contact,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'user' => $user
         ]);
     }
 
@@ -117,7 +122,7 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update($id, Request $request)
     {
         $validated_data = $request->validate([
             'name' => 'required|max:40',
@@ -125,13 +130,12 @@ class ContactController extends Controller
             'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
             'email' => 'nullable|email',
             'address' => 'required|max:100',
-            'image' => 'image|file|max:3000'
+            'image' => 'image|file|max:3000|mimes:jpg,jpeg,png'
         ]);
 
-        // $validatedData = $request->validate($rules);
         $validatedData['user_id'] = auth()->user()->id;
 
-        Contact::whereId($contact->id)->update($validatedData);
+        Contact::where("id", $id)->update($validated_data);
 
         return redirect('/dashboard/contacts')->with('success', 'Contact has been updated!');
     }
@@ -142,8 +146,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
+        $contact = Contact::findOrFail($id);
+
         Contact::destroy($contact->id);
 
         return redirect('/dashboard/contacts')->with('success', 'Contact has been deleted!');

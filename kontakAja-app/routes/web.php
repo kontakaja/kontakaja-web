@@ -61,6 +61,7 @@ Route::get('/dashboard/profile', [ProfileController::class, "index"])->name("pro
 // Bagian Contact Dashboard
 Route::controller(ContactController::class)->group(function () {
     Route::get('/dashboard/contacts', "index")->name("index-contact")->middleware('auth');
+    Route::get('/dashboard/contacts/show/{id}Contact', "show")->name("show-contact")->middleware('auth');
     Route::get('/dashboard/contacts/create', "create")->name("create-contact")->middleware('auth');
     Route::post('/dashboard/contacts/store', "store")->name("store-contact")->middleware('auth');
     Route::get('/dashboard/contacts/edit/{id}Contact', "edit")->name("edit-contact")->middleware('auth');

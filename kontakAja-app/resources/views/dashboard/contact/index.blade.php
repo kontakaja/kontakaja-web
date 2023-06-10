@@ -42,12 +42,32 @@
                             <div class="card__wrapper">
                                 <div class="card__container">
                                     <div class="card__body">
-                                        <button class="button-contact" data-modal="#detail">
+                                        <a href="{{ route('show-contact', $contact->id) }}" class="text-center">
                                             <div class="contact-card__avatar">
                                                 @if ($contact->image)
-                                                    <div class="mt-5 pt-4">
+                                                    <div class="">
                                                         <img src="{{ asset('storage/' . $contact->image) }}"
+                                                            alt="Contact image {{ $user }}" class="rounded-circle" style="height: 200px; width: 200px;">
+                                                    </div>
+                                                @else
+                                                    <div>
+                                                        <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
                                                             alt="Contact image {{ $user }}" class="rounded-circle">
+                                                    </div>
+                                                @endif
+                                            </div>
+                                            <h4 class="contact-card__title mt-5">{{ $contact->name }}</h4>
+                                            <div class="contact-card__label">
+                                                <span class="label label--primary">{{ $contact->category->name }}
+                                                </span>
+                                            </div>
+                                        </a>
+                                        {{-- <button class="button-contact" data-modal="#detail">
+                                            <div class="contact-card__avatar">
+                                                @if ($contact->image)
+                                                    <div class="">
+                                                        <img src="{{ asset('storage/' . $contact->image) }}"
+                                                            alt="Contact image {{ $user }}" class="rounded-circle" style="height: 200px; width: 200px;">
                                                     </div>
                                                 @else
                                                     <div>
@@ -60,7 +80,7 @@
                                             <div class="contact-card__label"><span
                                                     class="label label--primary">{{ $contact->category->name }}</span>
                                             </div>
-                                        </button>
+                                        </button> --}}
                                     </div>
                                     <div class="card__footer">
                                         <div class="card__container">
@@ -84,7 +104,7 @@
             </div>
         </div>
     </div>
-    <div class="inbox-add modal modal-compact scrollbar-thin" id="detail" data-simplebar>
+    {{-- <div class="inbox-add modal modal-compact scrollbar-thin" id="detail" data-simplebar>
         <div class="modal__overlay" data-dismiss="modal"></div>
         <div class="modal__wrap">
             <div class="modal__window">
@@ -95,7 +115,7 @@
                         </button>
                         <button class="detail-edit">
                             <a class="fa-solid fa-pen-to-square"></a>
-                        </button> 
+                        </button>
                     </div>
                     <div class="modal__body">
                             <div class="modal__container">
@@ -153,5 +173,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

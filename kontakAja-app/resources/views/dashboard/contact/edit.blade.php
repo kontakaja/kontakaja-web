@@ -12,14 +12,14 @@
 
             <div class="modal__body">
                 <div class="modal__container">
-                    <form action="/dashboard/contacts/store" method="PUT" enctype="multipart/form-data">
+                    <form action="{{ route('update-contact', $contact->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row row--md">
                             <div class="col-12 form-group form-group--lg">
                                 <label class="form-label form-label--sm">Nama</label>
                                 <div class="input-group">
                                     <input class="input @error('name') is-invalid @enderror" type="text"
-                                        id="name" name="name" autofocus value="{{ old('name') }}" required>
+                                        id="name" name="name" autofocus value="{{ old('name', $contact->name) }}" required>
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -32,7 +32,7 @@
                                 <select class="form-select @error('category_id') is-invalid @enderror"
                                     name="category_id" id="category_id">
                                     @foreach ($categories as $category)
-                                        @if (old('category_id') == $category->id)
+                                        @if (old('category_id', $contact->category_id) == $category->id)
                                             <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
                                         @else
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -50,7 +50,7 @@
                                 <div class="input-group">
                                     <input class="input js-phone-number @error('phone_number') is-invalid @enderror"
                                         type="text" id="phone_number" name="phone_number"
-                                        value="{{ old('phone_number') }}" required>
+                                        value="{{ old('phone_number', $contact->phone_number) }}" required>
                                     @error('phone_number')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -62,7 +62,7 @@
                                 <label class="form-label form-label--sm">Email</label>
                                 <div class="input-group">
                                     <input class="input @error('email') is-invalid @enderror" type="email"
-                                        id="email" name="email">
+                                        id="email" name="email" value="{{ old('email', $contact->email) }}">
                                     @error('email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -74,7 +74,7 @@
                                 <label class="form-label form-label--sm">Alamat</label>
                                 <div class="input-group">
                                     <input class="input @error('address') is-invalid @enderror" type="text"
-                                        id="address" name="address" value="{{ old('address') }}" required>
+                                        id="address" name="address" value="{{ old('address', $contact->address) }}" required>
                                     @error('address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
