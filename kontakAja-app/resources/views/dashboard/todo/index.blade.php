@@ -7,8 +7,8 @@
             <div class="box">
                 <i class="fa-solid fa-xmark"></i>
                 <h2 class="title">Edit</h2>
-                <input type="text" class="editItem" />
-                <input type="submit" class="editSubmit" value="Ubah" />
+                <input type="text" class="editItem"/>
+                <input type="submit" class="editSubmit" value="Ubah"/>
             </div>
             <div id="leftSide">
                 <header>

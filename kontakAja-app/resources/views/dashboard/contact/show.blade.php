@@ -49,19 +49,26 @@
                     <div class="box-detail number">
                         <h3><i class="fa fa-phone"></i> {{ $contact->phone_number }}</h3>
                     </div>
-                    <div class="box-detail email">
-                        <h3><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></h3>
-                    </div>
+                    @if ($contact->email)
+                        <div class="box-detail email">
+                            <h3><i class="fa-solid fa-envelope"></i><a href="mailto:{{ $contact->email }}"> {{ $contact->email }}</a></h3>
+                        </div>
+                    @else
+                        <div class="box-detail email">
+                            <h3>-</h3>
+                        </div>
+                    @endif
                     <div class="box-detail address">
                         <h3><i class="fas fa-map-marker-alt"></i> {{ $contact->address }}</h3>
                     </div>
                 </div>
             </div>
             <div class="detail-delete">
-                <form action="{{ route('delete-contact', $contact->id)}}" method="post">
+                <form action="{{ route('delete-contact', $contact->id) }}" method="post">
                     @method('delete')
                     @csrf
-                    <button class="btn-delete" onclick="return confirm('Apakah kamu yakin ingin menghapus kontak ini?')">Delete</button>
+                    <button class="btn-delete"
+                        onclick="return confirm('Apakah kamu yakin ingin menghapus kontak ini?')">Delete</button>
                 </form>
             </div>
         </div>

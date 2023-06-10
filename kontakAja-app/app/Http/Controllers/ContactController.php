@@ -124,18 +124,24 @@ class ContactController extends Controller
      */
     public function update($id, Request $request)
     {
-        $validated_data = $request->validate([
+        $rules = [
             'name' => 'required|max:40',
             'category_id' => 'required',
             'phone_number' => 'required|string|regex:/^(\+[0-9]{1,3})?([0-9]{10,13})$/',
             'email' => 'nullable|email',
             'address' => 'required|max:100',
             'image' => 'image|file|max:3000|mimes:jpg,jpeg,png'
-        ]);
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('contact-images');
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
 
-        Contact::where("id", $id)->update($validated_data);
+        Contact::where("id", $id)->update($validatedData);
 
         return redirect('/dashboard/contacts')->with('update', 'Kontak berhasil diperbarui!');
     }

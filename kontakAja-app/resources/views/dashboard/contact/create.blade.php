@@ -93,6 +93,7 @@
                                             </div>
                                         @enderror
                                     </div>
+                                    <small>*require: jpg, jpeg, png</small>
                                 </div>
                             </div>
                             <button class="button button--primary" type="submit"><span
