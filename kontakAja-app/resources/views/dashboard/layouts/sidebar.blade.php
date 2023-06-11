@@ -13,19 +13,19 @@
         <div class="sidebar__content" data-simplebar="data-simplebar">
             <nav class="sidebar__nav">
                 <ul class="sidebar__menu">
-                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard" aria-expanded="true"><span
+                    <li class="sidebar__menu-item"><a class="sidebar__link {{ 'dashboard' == request()->path() ? 'active' : '' }}" href="/dashboard" aria-expanded="true"><span
                                 class="sidebar__link-icon">
                                 <svg class="icon-icon-dashboard">
                                     <use xlink:href="#icon-dashboard"></use>
                                 </svg></span><span class="sidebar__link-text">Dashboard</span></a>
                     </li>
-                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard/contacts"
+                    <li class="sidebar__menu-item"><a class="sidebar__link {{ 'dashboard/contacts' == request()->path() ? 'active' : '' }}" href="/dashboard/contacts"
                             aria-expanded="true"><span class="sidebar__link-icon">
                                 <svg class="icon-icon-contacts">
                                     <use xlink:href="#icon-contacts"></use>
                                 </svg></span><span class="sidebar__link-text">Kontak</span></a>
                     </li>
-                    <li class="sidebar__menu-item"><a class="sidebar__link" href="/dashboard/todo"
+                    <li class="sidebar__menu-item"><a class="sidebar__link {{ 'dashboard/todo' == request()->path() ? 'active' : '' }}" href="/dashboard/todo"
                             aria-expanded="true"><span class="sidebar__link-icon">
                                 <svg class="icon-icon-todo">
                                     <use xlink:href="#icon-todo"></use>
