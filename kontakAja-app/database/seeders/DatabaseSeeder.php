@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Afrizal',
             'phone_number' => '081283612300',
             'email' => 'afrizal@gmail.com',
-            'address' => 'Banjarnegara'
+            'address' => 'Banjarnegara2'
         ]);
     }
 }
