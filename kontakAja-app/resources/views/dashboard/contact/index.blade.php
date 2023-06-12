@@ -104,12 +104,12 @@
                                     <div class="card__footer">
                                         <div class="card__container">
                                             <div class="row row--xs justify-content-between">
-                                                <div class="contact-card__address-left col-auto">
+                                                <div class="contact-card__phone-left col-auto">
                                                     <svg class="icon-icon-phone">
                                                         <use xlink:href="#icon-phone"></use>
                                                     </svg>Nomor Telepon:
                                                 </div>
-                                                <div class="col-auto text-light-theme"><a
+                                                <div class="col-auto text-light-theme"><a class="contact-number"
                                                         href="tel:{{ $contact->phone_number }}">{{ $contact->phone_number }}</a>
                                                 </div>
                                             </div>

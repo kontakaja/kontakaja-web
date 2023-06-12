@@ -2,7 +2,8 @@
 
 @section('container')
     <div class="container" style="margin-top: 0; padding-top: 0;">
-        <div class="detail-contact-container bg-white rounded pb-3">
+        <div class="detail-contact-container">
+            <div class="backdrop"></div>
             <div class="detail-contact-top">
                 <button class="detail-close" data-dismiss="modal">
                     <a href="/dashboard/contacts" class="fa-solid fa-arrow-left-long"></a>
