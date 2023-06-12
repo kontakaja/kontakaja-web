@@ -1488,6 +1488,10 @@ html[data-theme="light"] .button--secondary:hover {
     height: 55%;
 }
 
+.text-muted {
+    margin: 1rem;
+}
+
 .toggle-sidebar {
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -14468,7 +14472,7 @@ span.flatpickr-weekday {
     font-size: 2rem;
     line-height: 1.16667em;
     text-decoration: none;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .contact-card__phone {

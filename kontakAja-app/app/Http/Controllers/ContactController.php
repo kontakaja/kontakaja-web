@@ -22,13 +22,13 @@ class ContactController extends Controller
         $filters = $request->only('search');
         $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
         $cari_contact = Contact::where('user_id', auth()->user()->id)->filter($filters)->get();
-        $contacts = Contact::where('user_id', auth()->user()->id)->get();
+        $contacts = Contact::where('user_id', auth()->user()->id)->orderByRaw("SUBSTRING(name, 1, 1) ASC")->orderBy('name', 'ASC')->paginate(15)->withQueryString();
         $user = Auth::user()->username;
 
         return view("dashboard.contact.index", [
             "title" => "Dashboard",
             "contacts" => $contacts,
-            "contacts" => $cari_contact,
+            "cari_contacts" => $cari_contact,
         ])->with('user', $user)->with('total_contact', $total_contact);
     }
 

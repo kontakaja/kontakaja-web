@@ -38,15 +38,15 @@ class DatabaseSeeder extends Seeder
         Category::create(["name" => "Teman"]);
         Category::create(["name" => "Tetangga"]);
 
-        // Contact::factory(15)->create();
+        Contact::factory(40)->create();
 
-        Contact::create([
-            'category_id' => '3',
-            'user_id' => '1',
-            'name' => 'Afrizal',
-            'phone_number' => '081283612300',
-            'email' => 'afrizal@gmail.com',
-            'address' => 'Banjarnegara2'
-        ]);
+        // Contact::create([
+        //     'category_id' => '3',
+        //     'user_id' => '1',
+        //     'name' => 'Afrizal',
+        //     'phone_number' => '081283612300',
+        //     'email' => 'afrizal@gmail.com',
+        //     'address' => 'Banjarnegara'
+        // ]);
     }
 }
