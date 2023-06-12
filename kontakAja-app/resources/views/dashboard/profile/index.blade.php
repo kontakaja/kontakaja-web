@@ -13,19 +13,19 @@
                     <ul class="list-group" style="list-style-type: none">
                         <li class="mb-3">
                             Email<br>
-                            <div class="border border-5 p-2 mb-2 rounded">{{ $email }}</div>
+                            <div class="box-profile">{{ $email }}</div>
                         </li>
                         <li class="mb-3">
                             Username<br>
-                            <div class="border border-5 p-2 mb-2 rounded">{{ $user }}</div>
+                            <div class="box-profile">{{ $user }}</div>
                         </li>
                         <li class="mb-3">
                             Name<br>
-                            <div class="border border-5 p-2 mb-2 rounded">{{ $name }}</div>
+                            <div class="box-profile">{{ $name }}</div>
                         </li>
                         <li>
                             Account Created<br>
-                            <div class="border border-5 p-2 mb-2 rounded">{{ $emailVerifiedAt }}</div>
+                            <div class="box-profile">{{ $emailVerifiedAt }}</div>
                         </li>
                     </ul>
                 </div>
