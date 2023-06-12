@@ -48,11 +48,17 @@
                 </div>
                 <div class="button-horizontal">
                     <div class="box-detail number">
-                        <h3><i class="fa fa-phone"></i> {{ $contact->phone_number }}</h3>
+                        <div class="box-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3> {{ $contact->phone_number }}</h3>
                     </div>
                     @if ($contact->email)
                         <div class="box-detail email">
-                            <h3><i class="fa-solid fa-envelope"></i><a href="mailto:{{ $contact->email }}"> {{ $contact->email }}</a></h3>
+                            <div class="box-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        <h3><a href="mailto:{{ $contact->email }}"> {{ $contact->email }}</a></h3>
                         </div>
                     @else
                         <div class="box-detail email">
@@ -60,7 +66,10 @@
                         </div>
                     @endif
                     <div class="box-detail address">
-                        <h3><i class="fas fa-map-marker-alt"></i> {{ $contact->address }}</h3>
+                        <div class="box-icon">
+                             <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        </div>
+                       <h3> {{ $contact->address }}</h3>
                     </div>
                 </div>
             </div>
