@@ -21,14 +21,12 @@ class ContactController extends Controller
     {
         $filters = $request->only('search');
         $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
-        $cari_contact = Contact::where('user_id', auth()->user()->id)->filter($filters)->get();
-        $contacts = Contact::where('user_id', auth()->user()->id)->orderByRaw("SUBSTRING(name, 1, 1) ASC")->orderBy('name', 'ASC')->paginate(15)->withQueryString();
+        $contacts = Contact::where('user_id', auth()->user()->id)->filter($filters)->orderByRaw("SUBSTRING(name, 1, 1) ASC")->orderBy('name', 'ASC')->paginate(15)->withQueryString();
         $user = Auth::user()->username;
 
         return view("dashboard.contact.index", [
             "title" => "Dashboard",
             "contacts" => $contacts,
-            "cari_contacts" => $cari_contact,
         ])->with('user', $user)->with('total_contact', $total_contact);
     }
 
@@ -86,7 +84,6 @@ class ContactController extends Controller
         $user = Auth::user()->username;
         $contact = Contact::findOrFail($id);
 
-        // return view('dashboard.contact.show', compact('contact'));
         return view('dashboard.contact.show', [
             'title' => 'Detail Kontak',
             'contact' => $contact,
