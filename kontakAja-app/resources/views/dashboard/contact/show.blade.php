@@ -58,7 +58,7 @@
                             <div class="box-icon">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
-                        <h3><a href="mailto:{{ $contact->email }}"> {{ $contact->email }}</a></h3>
+                            <h3><a href="mailto:{{ $contact->email }}"> {{ $contact->email }}</a></h3>
                         </div>
                     @else
                         <div class="box-detail email">

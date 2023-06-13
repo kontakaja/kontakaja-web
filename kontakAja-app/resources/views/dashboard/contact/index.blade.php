@@ -58,7 +58,7 @@
                                 <div class="card__container">
                                     <div class="card__body">
                                         <a href="{{ route('show-contact', $contact->id) }}" class="text-center">
-                                            <div class="contact-card__avatar text-center">
+                                            <div class="contact-card__avatar">
                                                 @if ($contact->image)
                                                     <div class="">
                                                         <img src="{{ asset('storage/' . $contact->image) }}"
