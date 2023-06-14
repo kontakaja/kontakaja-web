@@ -4,7 +4,7 @@
         <div class="sidebar__top">
             <div class="container container--sm">
                 <a class="sidebar__logo" href="/" onclick="toggleLogo(event)">
-                    <img class="sidebar__logo-icon" src="{{ asset('assets/img/logo.svg') }}"
+                    <img class="sidebar__logo-icon" src="{{ asset('assets/img/logo-kontak.svg') }}"
                         alt="Logo KontakAja!" />
                     <div class="sidebar__logo-text"><img src="{{ asset('assets/img/logo-scroll.svg') }}"  alt="Logo"></div>
                 </a>
