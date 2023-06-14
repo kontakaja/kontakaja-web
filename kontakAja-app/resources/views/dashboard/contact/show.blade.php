@@ -39,7 +39,7 @@
                             <h3>Telepon</h3>
                         </button>
                     </a>
-                    <a href="https://goo.gl/maps/{{ $contact->address }}">
+                    <a href="https://www.google.com/maps/dir/{{ $contact->address }}">
                         <button class="btn-floating maps">
                             <i class='fas fa-map-marker-alt' style="font-size:28px;"></i>
                             <h3>Maps</h3>
