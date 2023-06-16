@@ -17,7 +17,7 @@
     @endif
     <div class="container">
         <div class="page-header">
-            <h1 class="page-header__title">Kontak <span class="text-grey">({{ $total_contact }})</span></h1>
+            <h1 class="page-header__title text-light">Kontak <span class="text-light">({{ $total_contact }})</span></h1>
         </div>
         <div class="toolbox">
             <div class="toolbox__row row gutter-bottom-xs">
