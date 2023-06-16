@@ -117,14 +117,6 @@
                                                                 </div>
                                                             @endif
                                                             <p>{{ $contact->name }}</p>
-                                                            <p>{{ $contact->category->name }}</p>
-                                                            <p>{{ $contact->phone_number }}</p>
-                                                            @if($contact->email)
-                                                            <p>{{ $contact->email }}</p>
-                                                            @else
-                                                            <p style="font-style: italic;">(Belum ada email)</p>
-                                                            @endif
-                                                            <p>{{ $contact->address }}</p>
                                                         </div>
                                                         <br>
                                                     @endforeach

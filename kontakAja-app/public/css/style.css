@@ -1617,7 +1617,7 @@ html[data-theme="light"] .button--secondary:hover {
 
 .label--primary {
     color: var(--white-color);
-    background-color: #FFAEBC;
+    background-color: #036ffc;
 }
 
 /* Badges */
@@ -3474,7 +3474,7 @@ html[data-theme="light"] .button--secondary:hover {
                 -1);
     padding: 1.4667rem 0 1.7333rem;
     border-top: 1px solid var(--border-grey-color);
-    background: #87ceeb;
+    background: #FFAEBC;
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
 }
 
@@ -6259,7 +6259,7 @@ html[data-theme="dark"] .input-group__arrows {
   width: 200px;
   height: auto;
   position: absolute;
-  top: 10px; 
+  top: 10px;
   left: 500px;
 }
 
@@ -14844,11 +14844,7 @@ span.flatpickr-weekday {
 }
 
 .profile-card {
-    background: linear-gradient(
-        90deg,
-        rgba(0, 162, 170, 1) 0%,
-        rgba(255, 174, 188, 1) 100%
-    );
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
