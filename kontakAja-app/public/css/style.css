@@ -1617,7 +1617,7 @@ html[data-theme="light"] .button--secondary:hover {
 
 .label--primary {
     color: var(--white-color);
-    background-color: #038cfc;
+    background-color: #FFAEBC;
 }
 
 /* Badges */
@@ -3474,7 +3474,7 @@ html[data-theme="light"] .button--secondary:hover {
                 -1);
     padding: 1.4667rem 0 1.7333rem;
     border-top: 1px solid var(--border-grey-color);
-    background: #FFAEBC;
+    background: #87ceeb;
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
 }
 
@@ -6259,48 +6259,68 @@ html[data-theme="dark"] .input-group__arrows {
   width: 200px;
   height: auto;
   position: absolute;
-  top: 10px;
+  top: 10px; 
   left: 500px;
 }
 
-.custom-header {
+.box-info {
+    color: cyan;
+}
+.custom-icon {
     display: flex;
     align-items: center;
 }
 
-.custom-icon {
-    background-color: #8be8ff; /* Soft cyan color */
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px;
-}
-
 .custom-icon i {
-    color: #fff; /* White color for icon */
-    font-size: 30px;
+    font-size: 100px;
+    color: cyan;
 }
 
 .text {
     display: flex;
-}
-
-.text-wrapper {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    text-align: center;
 }
 
 .text h3 {
     margin: 0;
-    font-size: 20px;
-    color: #333; /* Text color for H3 */
+    font-size: 32px;
 }
 
 .text p {
     margin: 0;
-    font-size: 14px;
-    color: #666; /* Text color for P */
+    font-size: 16px;
+    color: gray;
 }
 
+.card__header-left {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-item p {
+  font-size: 16px;
+  font-weight: bold;
+}
 
 
 @media (min-width: 1366px) {
@@ -14813,23 +14833,14 @@ span.flatpickr-weekday {
 }
 
 .detail-delete {
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    text-align: center;
     margin-top: 10px;
     font-size: 15px;
-    color: white;
-    border: 1px solid red;
-    max-width: 100px;
-    background-color: red;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
+    justify-content: center;
 }
 
-.detail-delete:hover {
+.detail-delete .btn-delete:hover {
     color: red;
-    background-color: white;
 }
 
 .profile-card {
