@@ -1617,7 +1617,7 @@ html[data-theme="light"] .button--secondary:hover {
 
 .label--primary {
     color: var(--white-color);
-    background-color: #FFAEBC;
+    background-color: #038cfc;
 }
 
 /* Badges */
@@ -3474,7 +3474,7 @@ html[data-theme="light"] .button--secondary:hover {
                 -1);
     padding: 1.4667rem 0 1.7333rem;
     border-top: 1px solid var(--border-grey-color);
-    background: #87ceeb;
+    background: #FFAEBC;
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
 }
 
@@ -6259,7 +6259,7 @@ html[data-theme="dark"] .input-group__arrows {
   width: 200px;
   height: auto;
   position: absolute;
-  top: 10px; 
+  top: 10px;
   left: 500px;
 }
 

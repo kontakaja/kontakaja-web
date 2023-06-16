@@ -27,7 +27,10 @@ class ContactController extends Controller
         return view("dashboard.contact.index", [
             "title" => "Dashboard",
             "contacts" => $contacts,
-        ])->with('user', $user)->with('total_contact', $total_contact);
+        ])->with([
+            'user' => $user,
+            'total_contact' => $total_contact
+        ]);
     }
 
     /**

@@ -19,5 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var message = welcomeMessages[randomIndex];
     var words = message.split(" ");
     var formattedMessage = words.slice(0, 3).join(" ") + "<br>" + words.slice(3).join(" ") + " " + emojis[Math.floor(Math.random() * emojis.length)];
-    welcomeMessageElement.innerHTML = "Hiii!!! Mark 🎉<br><span>" + formattedMessage + "</span>";
+    var username = "{{ $user }}"; // Ganti dengan variabel yang berisi nama pengguna
+    var modifiedMessage = "Hiii!!! " + username + " 🎉<br><span>" + formattedMessage + "</span>";
+    welcomeMessageElement.innerHTML = modifiedMessage;
 });
