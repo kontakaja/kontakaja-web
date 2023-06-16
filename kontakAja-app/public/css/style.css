@@ -1490,6 +1490,7 @@ html[data-theme="light"] .button--secondary:hover {
 
 .text-muted {
     margin: 1rem;
+    font-weight: bold;
 }
 
 .toggle-sidebar {
