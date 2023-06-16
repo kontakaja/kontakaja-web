@@ -62,6 +62,9 @@
                         </div>
                     @else
                         <div class="box-detail email">
+                            <div class="box-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
                             <h3>-</h3>
                         </div>
                     @endif
