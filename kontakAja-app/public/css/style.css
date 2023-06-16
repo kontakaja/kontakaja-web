@@ -14813,14 +14813,23 @@ span.flatpickr-weekday {
 }
 
 .detail-delete {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
     margin-top: 10px;
     font-size: 15px;
-    justify-content: center;
+    color: white;
+    border: 1px solid red;
+    max-width: 100px;
+    background-color: red;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.detail-delete .btn-delete:hover {
+.detail-delete:hover {
     color: red;
+    background-color: white;
 }
 
 .profile-card {
