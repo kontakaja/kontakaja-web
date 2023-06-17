@@ -7268,6 +7268,13 @@ html[data-theme="dark"] .input-group__arrows {
     }
 }
 
+@media (max-width: 550px) {
+    .sidebar-collapse .sidebar__logo-icon {
+        margin: 0;
+        height: 30px;
+    }
+}
+
 @media (min-width: 1366px) {
     .sidebar-collapse .sidebar__logo-text {
         opacity: 0;
@@ -8026,7 +8033,7 @@ html[data-theme="dark"] .input-group__arrows {
 
 @media (max-width: 1365px) {
     .header__toggle-menu.active {
-        color: var(--blue-color);
+        color: #87ceeb;
     }
 }
 
