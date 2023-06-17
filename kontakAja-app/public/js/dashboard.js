@@ -1,25 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var welcomeMessages = [
-        "Selamat datang kembali! Yuk, cek kegiatanmu hari ini!",
-        "Ada kegiatan menarik apa hari ini?",
-        "Selamat datang! Jangan lupa cek agenda harianmu!",
-        "Ada proyek menarik yang harus kamu kerjakan hari ini!",
-        "Apa kabar? Jangan lupa cek kegiatanmu ya!",
-        "Semangat untuk hari ini!",
-        "Selamat datang kembali! Ayo, raih prestasi hari ini!",
-        "Ada hal menarik yang sedang kamu kerjakan?",
-        "Selamat datang! Bagaimana rencanamu hari ini?",
-        "Ada kegiatan spesial apa yang akan kamu lakukan?"
-    ];
+  var welcomeMessages = [
+    "Yuk, cek kegiatanmu hari ini!",
+    "Ada kegiatan menarik apa hari ini?",
+    "Jangan lupa cek agenda harianmu!",
+    "Ada proyek menarik yang harus kamu kerjakan hari ini!",
+    "Apa kabar? Jangan lupa cek kegiatanmu ya!",
+    "Semangat untuk hari ini!",
+    "Ayo, raih prestasi hari ini!",
+    "Ada hal menarik yang sedang kamu kerjakan?",
+    "Bagaimana rencanamu hari ini?",
+    "Ada kegiatan spesial apa yang akan kamu lakukan?"
+  ];
 
-    var emojis = ["😊", "🎉", "💪", "🌟", "🥳", "🚀", "🌈", "🔥", "💼"];
+  var emojis = ["😊", "🎉", "💪", "🌟", "🥳", "🚀", "🌈", "🔥", "💼"];
 
-    var welcomeMessageElement = document.getElementById("welcomeMessage");
-    var randomIndex = Math.floor(Math.random() * welcomeMessages.length);
-    var message = welcomeMessages[randomIndex];
-    var words = message.split(" ");
-    var formattedMessage = words.slice(0, 3).join(" ") + "<br>" + words.slice(3).join(" ") + " " + emojis[Math.floor(Math.random() * emojis.length)];
-    var username = "{{ $user }}"; // Ganti dengan variabel yang berisi nama pengguna
-    var modifiedMessage = "Hiii!!! " + username + " 🎉<br><span>" + formattedMessage + "</span>";
-    welcomeMessageElement.innerHTML = modifiedMessage;
+  var welcomeMessageElement = document.getElementById("welcomeMessage");
+  var randomIndex = Math.floor(Math.random() * welcomeMessages.length);
+  var message = welcomeMessages[randomIndex];
+  var words = message.split(" ");
+
+  var formattedMessage =
+    "<h2 id=\"welcomeMessage\">Hiii!!! {{$user}} 🎉<br>" +
+    words.slice(0, 3).join(" ") +
+    "<br>" +
+    words.slice(3).join(" ") +
+    " " +
+    emojis[Math.floor(Math.random() * emojis.length)] +
+    "</h2>";
+
+  welcomeMessageElement.outerHTML = formattedMessage;
 });
