@@ -11,7 +11,8 @@
                                 <div class="card__header">
                                     <div class="projectCard">
                                         <div class="projectTop">
-                                            <h2 id="welcomeMessage">Hiii!!! {{ $user }} 🎉<br>Selamat datang
+                                            <h1>Hai {{ $name }}! 🎉</h1>
+                                            <h2 id="welcomeMessage"><br>Selamat datang
                                                 kembali<br>Ayo check kegiatan kamu hari ini!!!</h2>
                                             <img src="img/groupImg/image1.png" alt="img1">
                                         </div>

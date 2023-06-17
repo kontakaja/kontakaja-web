@@ -11,13 +11,15 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         $total_contact = Contact::where('user_id', auth()->user()->id)->get()->count();
-        $user = Auth::user()->name;
+        $user = Auth::user()->username;
+        $name = Auth::user()->name;
         $recentContacts = $this->getRecentContacts($request);
 
         return view("dashboard.index", [
             "title" => "Dashboard"
         ])->with([
             'user' => $user,
+            'name' => $name,
             'total_contact' => $total_contact,
             'recentContacts' => $recentContacts
         ]);
