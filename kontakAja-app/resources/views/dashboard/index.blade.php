@@ -65,7 +65,7 @@
                                         <div class="js-calendar-inline"></div>
                                     </div>
                                 </div>
-                                <div class="card__footer card__footer--md">
+                                <div class="calendar__footer calendar__footer--md">
                                     <div class="card__container">
                                         <div class="calendar-widget" data-calendar="#calendarOne">
                                             <div class="calendar-widget__row">
@@ -137,12 +137,17 @@
                                     <div class="contact-info">
                                         <h1>Butuh Bantuan?</h1>
                                         <h2>Informasi Kontak</h2>
-                                        <p class="phone">Nomor Telepon: <a href="tel:(+62) 816-238-252">(+62) 816-238-252</a></p>
-                                        <p class="email">Email: <a href="mailto:mykontakaja@gmail.com">mykontakaja@gmail.com</a></p>
+                                        <p class="phone">Nomor Telepon: <a href="tel:(+62) 816-238-252">(+62)
+                                                816-238-252</a></p>
+                                        <p class="email">Email: <a
+                                                href="mailto:mykontakaja@gmail.com">mykontakaja@gmail.com</a></p>
                                         <div class="social-icons">
-                                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://www.facebook.com/" target="_blank"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a href="https://www.twitter.com/" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="https://www.instagram.com/" target="_blank"><i
+                                                    class="fab fa-instagram"></i></a>
                                         </div>
                                         <img src="img/groupImg/image3.png" alt="img3">
                                     </div>
@@ -150,8 +155,7 @@
                             </div>
                         </div>
                     </div>
-                /div>
-            </div>
+                </div>
         </section>
     </div>
 @endsection

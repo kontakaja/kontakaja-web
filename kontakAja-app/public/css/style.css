@@ -6259,7 +6259,7 @@ html[data-theme="dark"] .input-group__arrows {
   width: 200px;
   height: auto;
   position: absolute;
-  top: 16px; 
+  top: 16px;
   left: 500px;
 }
 
@@ -6359,8 +6359,8 @@ html[data-theme="dark"] .input-group__arrows {
     color: #fff;
     background-color: #333;
     padding: 10px;
-    width: 40px; 
-    height: 40px; 
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     text-decoration: none;
 }
@@ -6369,7 +6369,7 @@ html[data-theme="dark"] .input-group__arrows {
         background-color: #666;
 }
 
-.card__footer {
+.calendar__footer {
     display: none;
 }
 
