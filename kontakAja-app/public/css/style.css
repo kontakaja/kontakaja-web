@@ -6239,7 +6239,6 @@ html[data-theme="dark"] .input-group__arrows {
   padding-top: calc(var(--header-height) + var(--order-tabs-height) + var(--order-tabs-offset-bottom));
 }
 
-
 .container .right main .projectCard .projectTop {
     position: relative;
     width: 100%;
@@ -6260,13 +6259,16 @@ html[data-theme="dark"] .input-group__arrows {
   width: 200px;
   height: auto;
   position: absolute;
-  top: 10px;
+  top: 16px; 
   left: 500px;
 }
 
 .box-info {
-    color: cyan;
+    background: linear-gradient(rgba(3, 240, 252, 0.5), rgba(3, 240, 252, 0.5));
+    border-radius: 10px;
+    margin-top: 20px;
 }
+
 .custom-icon {
     display: flex;
     align-items: center;
@@ -6274,7 +6276,7 @@ html[data-theme="dark"] .input-group__arrows {
 
 .custom-icon i {
     font-size: 100px;
-    color: cyan;
+    color: pink;
 }
 
 .text {
@@ -6282,16 +6284,17 @@ html[data-theme="dark"] .input-group__arrows {
     justify-content: center;
     margin-left: 100px;
     text-align: center;
+    margin-top: 19px;
 }
 
 .text h3 {
     margin: 0;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 .text p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: gray;
 }
 
@@ -6319,10 +6322,56 @@ html[data-theme="dark"] .input-group__arrows {
 }
 
 .contact-item p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
+.contact-info {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(152, 245, 255, 0.7), rgba(255, 192, 203, 0.7));
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-info .social-icons {
+    margin-top: 10px;
+}
+
+.contact-info .social-icons a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.contact-info .social-icons a:hover {
+        background-color: #666;
+}
+
+.card__footer {
+    display: none;
+}
 
 @media (min-width: 1366px) {
     .sidebar-collapse .page-content {
