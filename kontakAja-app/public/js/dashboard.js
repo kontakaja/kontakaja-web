@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var words = message.split(" ");
 
   var formattedMessage =
-    "<h2 id=\"welcomeMessage\">Hiii!!! {{$user}} 🎉<br>" +
+    "<h2 id=\"welcomeMessage\"><br>" +
     words.slice(0, 3).join(" ") +
     "<br>" +
     words.slice(3).join(" ") +
