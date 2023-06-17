@@ -7,7 +7,7 @@
             <div class="profile-card">
                 <div class="card-body">
                     <div class="mb-4 text-center">
-                        <img src="{{ asset('img/content/humans/item-1.jpg') }}" alt="Profile Picture" class="rounded-circle">
+                        <img src="{{ asset('img/content/humans/user-photo.jpg') }}" style="height:100px" alt="Profile Picture" class="rounded-circle">
                     </div>
                     <h2 class="card-title text-center mb-4" style="font-size: 1.5rem;">{{ $name }} Profile</h2>
                     <ul class="list-group" style="list-style-type: none">
