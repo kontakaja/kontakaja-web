@@ -362,7 +362,7 @@
                                 <img src="{{ asset('assets/img/afrizal.png') }}" alt="Thumb">
                             </div>
                             <div class="info">
-                                <span>Front-End Developer</span>
+                                <span>Dashboard Engineer</span>
                                 <h4>Afrizal Adiestya Putra</h4>
                                 <div class="contact">
                                     <i class="fab fa-linkedin"></i>
