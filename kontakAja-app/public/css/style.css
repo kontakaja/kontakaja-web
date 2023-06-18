@@ -7273,6 +7273,12 @@ html[data-theme="dark"] .input-group__arrows {
         margin: 0;
         height: 30px;
     }
+    /*.box-detail{*/
+    /*    max-width: 300px;*/
+    /*}*/
+    /*.btn-floating {*/
+    /*    height: 70px;*/
+    /*}*/
 }
 
 @media (min-width: 1366px) {
@@ -14940,14 +14946,17 @@ span.flatpickr-weekday {
     color: #44566c;
 }
 
+.button-contact {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
 /* Responsiveness */
 @media (max-width: 600px) {
     .profile-card {
         max-width: 100%;
-    }
-
-    .button-vertical {
-        flex-wrap: wrap;
     }
 }
 
@@ -14960,15 +14969,27 @@ span.flatpickr-weekday {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .btn-floating {
+        height: 70px;
+    }
 }
 
 @media (max-width: 420px) {
     .box-detail{
-        max-width: 230px;
+        max-width: 250px;
     }
     .profile-pic{
         width: 230px;
         height: 230px;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 500px) {
+    .btn-floating {
+        height: 70px;
+    }
+    .button-vertical {
+        flex-wrap: wrap;
     }
 }
 
@@ -14981,7 +15002,6 @@ span.flatpickr-weekday {
         height: 6.5rem;
     }
 }
-
 
 .profile-card-bottom {
     display: flex;
