@@ -11,7 +11,7 @@
                                 <div class="card__header">
                                     <div class="projectCard">
                                         <div class="projectTop">
-                                            <h1>Hai {{ $name }}! 🎉</h1>
+                                            <h1>Hai {{ $name }}! ðŸŽ‰</h1>
                                             <h2 id="welcomeMessage"><br>Selamat datang
                                                 kembali<br>Ayo check kegiatan kamu hari ini!!!</h2>
                                             <img src="img/groupImg/image1.png" alt="img1">
@@ -105,21 +105,23 @@
                                                 </div>
                                                 <div class="contact-list">
                                                     @foreach ($recentContacts as $contact)
-                                                        <div class="contact-item">
-                                                            @if ($contact->image)
-                                                                <div class="">
-                                                                    <img src="{{ asset('storage/' . $contact->image) }}"
-                                                                        alt="Contact image {{ $user }}">
-                                                                </div>
-                                                            @else
-                                                                <div>
-                                                                    <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
-                                                                        alt="Contact image {{ $user }}">
-                                                                </div>
-                                                            @endif
-                                                            <p>{{ $contact->name }}</p>
-                                                        </div>
-                                                        <br>
+                                                        <a href="{{ route('show-contact', $contact->id) }}">
+                                                            <div class="contact-item">
+                                                                @if ($contact->image)
+                                                                    <div class="">
+                                                                        <img src="{{ asset('storage/' . $contact->image) }}"
+                                                                            alt="Contact image {{ $user }}">
+                                                                    </div>
+                                                                @else
+                                                                    <div>
+                                                                        <img src="{{ asset('img/content/humans-2/item-1.jpg') }}"
+                                                                            alt="Contact image {{ $user }}">
+                                                                    </div>
+                                                                @endif
+                                                                <p>{{ $contact->name }}</p>
+                                                                
+                                                            </div>
+                                                        </a>
                                                     @endforeach
                                                 </div>
                                             </div>
@@ -145,8 +147,8 @@
                                         <div class="social-icons">
                                             <a href="https://www.facebook.com/" target="_blank"><i
                                                     class="fab fa-facebook-f"></i></a>
-                                            <a href="https://www.twitter.com/" target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
+                                            <a href="https://www.youtube.com/@KontakAja_Indonesia" target="_blank"><i
+                                                    class="fab fa-youtube"></i></a>
                                             <a href="https://www.instagram.com/" target="_blank"><i
                                                     class="fab fa-instagram"></i></a>
                                         </div>
