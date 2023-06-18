@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="KontakAja! adalah aplikasi kontak yang memudahkan gaya hidup Anda.">
-    <meta name="dicoding:email" content="reydylanza@gmail.com">
     <title>KontakAja! - Connect Easily, Going Fastly</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -363,7 +362,7 @@
                                 <img src="{{ asset('assets/img/afrizal.png') }}" alt="Thumb">
                             </div>
                             <div class="info">
-                                <span>Dashboard Engineer</span>
+                                <span>Front-End Developer</span>
                                 <h4>Afrizal Adiestya Putra</h4>
                                 <div class="contact">
                                     <i class="fab fa-linkedin"></i>
@@ -542,7 +541,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Useful Link</h4>
@@ -553,6 +551,14 @@
                                 <li><a href="https://www.instagram.com/dicoding/">Instagram Dicoding</a></li>
                                 <li><a href="https://www.instagram.com/kampusmerdeka.ri/">Instagram Kampus Merdeka</a>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1pbKitugDZYpscppZ9PNQf7weFmEqvN8x/view?usp=sharing">Manual Guide Book</a></li>
                             </ul>
                         </div>
                     </div>
