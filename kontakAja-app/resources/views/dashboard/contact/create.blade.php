@@ -96,15 +96,17 @@
                                     <small>*require: jpg, jpeg, png</small>
                                 </div>
                             </div>
-                            <button class="button button--primary" type="submit"><span
-                                    class="button__icon button__icon--left">
-                                    <svg class="icon-icon-plus">
-                                        <use xlink:href="#icon-plus"></use>
-                                    </svg></span><span class="button__text">Tambahkan Kontak</span>
-                            </button>
-                            <button class="button button--secondary"><span class="button__text"><a
-                                        href="/dashboard/contacts" class="text-decoration-none">Batal</a></span>
-                            </button>
+                            <div class="button-contact">
+                                <button class="button button--primary" type="submit"><span
+                                        class="button__icon button__icon--left">
+                                        <svg class="icon-icon-plus">
+                                            <use xlink:href="#icon-plus"></use>
+                                        </svg></span><span class="button__text">Tambahkan Kontak</span>
+                                </button>
+                                <button class="button button--secondary"><span class="button__text"><a
+                                            href="/dashboard/contacts" class="text-decoration-none">Batal</a></span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
