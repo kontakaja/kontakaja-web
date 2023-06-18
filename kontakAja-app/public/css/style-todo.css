@@ -247,6 +247,13 @@
 .todo-list .todos .fa-xmark:hover {
   background-color: var(--red-hover);
 }
+
+.todo-title {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 #rightSide {
   width: 50%;
   height: calc(100vh - 40px);
@@ -313,23 +320,23 @@
 }
 
 @media (max-width: 550px) {
-  html {
-    font-size: 10px;
-  }
-  #leftSide {
-    padding: 30px 2rem 3rem 2rem;
-  }
-  #rightSide {
-    padding: 0rem 2rem 5rem 2rem;
-  }
-  #leftSide .add-container .submitBtn {
-    margin-top: 0;
-    padding: 8px 12px;
-  }
-  .box {
-    width: 300px;
-    height: 180px;
-  }
+    html {
+        font-size: 10px;
+    }
+    #leftSide {
+        padding: 30px 2rem 3rem 2rem;
+    }
+    #rightSide {
+        padding: 0rem 2rem 5rem 2rem;
+    }
+    #leftSide .add-container .submitBtn {
+        margin-top: 0;
+        padding: 8px 12px;
+    }
+    .box {
+        width: 300px;
+        height: 180px;
+    }
 }
 
 
