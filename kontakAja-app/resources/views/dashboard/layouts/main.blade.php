@@ -13,8 +13,9 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="KontakAja! adalah aplikasi kontak yang memudahkan gaya hidup Anda." />
     <meta name="apple-mobile-web-app-title" content="KontakAja! Dashboard" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="dicoding:email" content="reydylanza@gmail.com">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/apexcharts.css') }}" />
