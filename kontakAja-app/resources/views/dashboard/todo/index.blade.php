@@ -25,10 +25,12 @@
                         </form>
                     </div>
                 </header>
+                <div class="todo-title">Belum dilakukan</div>
                 <div class="list"></div>
                 <div class="total">Tugas Tersisa: 0</div>
             </div>
             <div id="rightSide">
+                <div class="todo-title">Sudah dilakukan</div>
                 <div class="list"></div>
                 <div class="total">Tugas Selesai: 0</div>
             </div>
